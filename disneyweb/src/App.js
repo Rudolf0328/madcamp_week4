@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import Animation from './MainPage/main';
+import MainPage from './MainPage/main';
+import Introduce from './MainPage/main';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <Animation/>
+      <MainPage/>
     </div>
   );
 }

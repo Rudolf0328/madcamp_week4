@@ -1,4 +1,55 @@
-.item {
+body {
+  margin: 0;
+  overflow-y: hidden;
+}
+
+.outer {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* 화면에서 스크롤바 안보이게 */
+.outer::-webkit-scrollbar {
+  display: none;
+}
+
+.inner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+
+.bg-yellow {
+  background-color: #f7f6cf;
+}
+
+.bg-blue {
+  background-color: #b6d8f2;
+}
+
+.bg-pink {
+  background-color: #f4cfdf;
+}
+
+.divider {
   width: 100%;
-  height: 500px;
+  height: 5px;
+  background-color: white;
+}
+
+.lineCom {
+  display: flex;
+  border-right: 30px solid black;
+  width: 200px;
+  height: 100%;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.totalDiv {
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
 }
