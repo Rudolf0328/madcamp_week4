@@ -35,7 +35,7 @@ function MainPage() {
           //현재 2페이지
           console.log("현재 2페이지, down");
           outerDivRef.current.scrollTo({
-            top: pageHeight * 2 + DIVIDER_HEIGHT * 2,
+            top: pageHeight * 2 + DIVIDER_HEIGHT,
             left: 0,
             behavior: "smooth",
           });
@@ -44,7 +44,7 @@ function MainPage() {
           //현재 2페이지
           console.log("현재 3페이지, down");
           outerDivRef.current.scrollTo({
-            top: pageHeight * 3 + DIVIDER_HEIGHT * 2,
+            top: pageHeight * 3 + DIVIDER_HEIGHT,
             left: 0,
             behavior: "smooth",
           });
@@ -53,7 +53,7 @@ function MainPage() {
           // 현재 3페이지
           console.log("현재 4페이지, down");
           outerDivRef.current.scrollTo({
-            top: pageHeight * 3 + DIVIDER_HEIGHT * 2,
+            top: pageHeight * 3 + DIVIDER_HEIGHT * 3,
             left: 0,
             behavior: "smooth",
           });

@@ -12,7 +12,7 @@ const IntroBlock = styled.div`
 
 
 let FirstEstab = () => {
-  return<div className='totalDivTwo'>
+  return<div className='totalDivOne'>
     {/* <Box sx={{ width: '50%', height: "100%" }}> */}
       {/* <div className='line'> </div> */}
       <div className='lineCom'>
@@ -21,6 +21,15 @@ let FirstEstab = () => {
       </div>
       <div className='year-beside-line'>
         1923
+        <Fade right repeat>
+        <IntroBlock>
+          {/* <h1 align="left">|</h1> */}
+          <div className='content-under-year'>
+            월트 디즈니 컴퍼니 <br />
+            창립
+          </div>
+        </IntroBlock>
+      </Fade>
         </div>
       </div>
       </div>
@@ -36,16 +45,7 @@ let FirstEstab = () => {
         </IntroBlock>
       </Fade>
     </Box> */}
-      <Fade right>
-        <IntroBlock>
-          {/* <h1 align="left">|</h1> */}
       
-          <div className='right-content'>
-            월트 디즈니 컴퍼니 <br />
-            창립
-          </div>
-        </IntroBlock>
-      </Fade>
   </div>
 }
 

@@ -21,6 +21,16 @@ let First10Million = () => {
       </div>
       <div className='year-beside-line'>
         2013
+        <Fade right>
+        <IntroBlock>
+          {/* <h1 align="left">|</h1> */}
+      
+          <div className='content-under-year'>
+            첫 한국 천만 영화<br />
+            겨울 왕국
+          </div>
+        </IntroBlock>
+      </Fade>
         </div>
       </div>
       </div>
@@ -36,16 +46,7 @@ let First10Million = () => {
         </IntroBlock>
       </Fade>
     </Box> */}
-      <Fade right>
-        <IntroBlock>
-          {/* <h1 align="left">|</h1> */}
       
-          <div className='right-content'>
-            첫 한국 천만 영화<br />
-            겨울 왕국
-          </div>
-        </IntroBlock>
-      </Fade>
   </div>
 }
 
