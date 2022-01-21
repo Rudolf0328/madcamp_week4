@@ -3,6 +3,7 @@ import './App.css';
 import MainPage from './MainPage/main';
 import Introduce from './MainPage/main';
 import Header from './Header/main';
+import { Routes, Route, BrowserRouter as Router} from "react-router-dom";
 
 function App() {
   return (
@@ -22,15 +23,8 @@ function App() {
           Learn React
         </a>
       </header> */}
-<<<<<<< HEAD
       {/* <MainPage/> */}
       <Header></Header>
-=======
-      <Routes>
-      <Route path = "/" element = {<MainPage/>} />
-      <Route path = "/home" element = {<MainPage/>} />
-      </Routes>
->>>>>>> origin
     </div>
     </Router>
   );

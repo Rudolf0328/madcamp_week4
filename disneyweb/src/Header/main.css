@@ -1,3 +1,14 @@
+/* for css flex */
+.container {
+  display: flex;
+  width: 100vh;
+  height: 15vh;
+}
+
+.item {
+  flex-basis: auto;
+}
+
 .header-background {
   background-color: black;
   /* width: 100vh; */
@@ -5,10 +16,11 @@
 }
 
 .logo-diswiki {
-  position: absolute;
+  /* position: absolute; */
+  flex-basis: auto;
   width: 241px;
   height: 88.86px;
   left: 39px;
   top: 60px;
-  background: url(./diswiki.png);
+  /* background: url(./diswiki.png); */
 }
