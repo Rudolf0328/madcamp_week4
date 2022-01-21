@@ -1,7 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-
+import {Link, BrowserRouter as Router} from 'react-router-dom';
+import Fade from "react-reveal/Fade";
 import Dots from "./Dots";
+import First10Million from "./First10Million";
 import FirstColor from "./FirstColor";
+import FirstEstab from "./FirstEstab";
 
 import "./main.css";
 
@@ -33,7 +36,7 @@ function MainPage() {
           //현재 2페이지
           console.log("현재 2페이지, down");
           outerDivRef.current.scrollTo({
-            top: pageHeight * 2 + DIVIDER_HEIGHT * 2,
+            top: pageHeight * 2 + DIVIDER_HEIGHT,
             left: 0,
             behavior: "smooth",
           });
@@ -42,7 +45,7 @@ function MainPage() {
           //현재 2페이지
           console.log("현재 3페이지, down");
           outerDivRef.current.scrollTo({
-            top: pageHeight * 3 + DIVIDER_HEIGHT * 2,
+            top: pageHeight * 3 + DIVIDER_HEIGHT,
             left: 0,
             behavior: "smooth",
           });
@@ -51,7 +54,7 @@ function MainPage() {
           // 현재 3페이지
           console.log("현재 4페이지, down");
           outerDivRef.current.scrollTo({
-            top: pageHeight * 3 + DIVIDER_HEIGHT * 2,
+            top: pageHeight * 3 + DIVIDER_HEIGHT * 3,
             left: 0,
             behavior: "smooth",
           });
@@ -105,18 +108,25 @@ function MainPage() {
     };
   }, []);
   return (
+    <Link to = "/home">
     <div ref={outerDivRef} className="outer">
+      {/* <div className="outer"> */}
       {/* <Dots scrollIndex={scrollIndex} /> */}
+      <Fade>
       <img src="./castleDay.gif" width="100%" height="100%"></img>
-        {/* <div className="divider"></div> */}
+      </Fade>
+        {/* <div className="inner">
+          <FirstEstab></FirstEstab>
+        </div>
         <div className="inner">
           <FirstColor></FirstColor>
         </div>
-        {/* <div className="divider"></div> */}
-        <div className="inner bg-blue">2</div>
-        {/* <div className="divider"></div> */}
-        <div className="inner bg-pink">3</div>
+        <div className="inner">
+          <First10Million></First10Million>
+        </div> */}
     </div>
+    
+    </Link>
   );
 }
 

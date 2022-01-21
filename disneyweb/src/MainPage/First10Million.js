@@ -11,8 +11,8 @@ const IntroBlock = styled.div`
   }`;
 
 
-let FirstColor = () => {
-  return<div className='totalDivTwo'>
+let First10Million = () => {
+  return<div className='totalDivThree' >
     {/* <Box sx={{ width: '50%', height: "100%" }}> */}
       {/* <div className='line'> </div> */}
       <div className='lineCom'>
@@ -20,14 +20,14 @@ let FirstColor = () => {
       <div className='circle-in-the-line'>
       </div>
       <div className='year-beside-line'>
-        1937
+        2013
         <Fade right>
         <IntroBlock>
           {/* <h1 align="left">|</h1> */}
       
           <div className='content-under-year'>
-            첫 color animation <br />
-            백설 공주와 일곱 난쟁이
+            첫 한국 천만 영화<br />
+            겨울 왕국
           </div>
         </IntroBlock>
       </Fade>
@@ -46,7 +46,8 @@ let FirstColor = () => {
         </IntroBlock>
       </Fade>
     </Box> */}
+      
   </div>
 }
 
-export default FirstColor;
+export default First10Million;
