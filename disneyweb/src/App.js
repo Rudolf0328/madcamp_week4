@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import MainPage from './MainPage/main';
 import Introduce from './MainPage/main';
+import Header from './Header/main';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <MainPage/>
+      {/* <MainPage/> */}
+      <Header></Header>
     </div>
   );
 }

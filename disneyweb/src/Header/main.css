@@ -1,0 +1,14 @@
+.header-background {
+  background-color: black;
+  /* width: 100vh; */
+  height: 15vh;
+}
+
+.logo-diswiki {
+  position: absolute;
+  width: 241px;
+  height: 88.86px;
+  left: 39px;
+  top: 60px;
+  background: url(./diswiki.png);
+}
