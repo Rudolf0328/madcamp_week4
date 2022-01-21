@@ -1,0 +1,47 @@
+.player{
+    position: relative;
+    display: flex;
+    overflow-y: calc();
+}
+.lppan{
+    align-content: center;
+    max-width: 600px;
+    position:absolute;
+    margin-top: 50px;
+    margin-left: 400px;
+    animation: spin 1.8s infinite linear;
+}
+.cover{
+    align-content: center;
+    max-width: 202px;
+    position:absolute;
+    margin-top: 249px;
+    margin-left: 600px;
+    animation: spin 1.8s infinite linear;
+}
+.arm{
+    position:absolute;
+    margin-top: 100px;
+    margin-left: 133px;
+    transform-origin: 3% 98%
+}
+.go{
+    transform: rotate(60deg);
+}
+.circle{
+    position:absolute;
+    margin-top: 450px;
+    margin-left: 80px;
+}
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+  
+.pause .cover {
+    animation-play-state: paused;
+  }
