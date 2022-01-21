@@ -108,20 +108,21 @@ function MainPage() {
   }, []);
   return (
     <div ref={outerDivRef} className="outer">
+      {/* <div className="outer"> */}
       {/* <Dots scrollIndex={scrollIndex} /> */}
       <img src="./castleDay.gif" width="100%" height="100%"></img>
         {/* <div className="divider"></div> */}
-        <div className="inner">
+        {/* <div className="inner">
           <FirstEstab></FirstEstab>
         </div>
         <div className="inner">
           <FirstColor></FirstColor>
-        </div>
+        </div> */}
         {/* <div className="divider"></div> */}
         {/* <div className="divider"></div> */}
-        <div className="inner">
+        {/* <div className="inner">
           <First10Million></First10Million>
-        </div>
+        </div> */}
     </div>
   );
 }
