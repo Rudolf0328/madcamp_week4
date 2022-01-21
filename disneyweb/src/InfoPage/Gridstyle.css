@@ -1,0 +1,110 @@
+body {
+    background: #fff;
+  }
+  
+  .App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .container {
+    /* width: 250px; */
+    width: 100%;
+    display: "flex";
+    /* overflow: auto; */
+    /* height: auto; */
+    /* overflow-x: hidden; */
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* overflow-x: scroll; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 900px;
+    justify-content: space-evenly;
+    /* overflow: scroll; */
+
+  }
+
+  .individual{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .paper{
+    width: 324px;
+    height: 439px;
+    justify-content: space-evenly;
+    
+    /* border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+    border-top: 100px solid transparent; */
+
+  }
+
+
+.profile
+{
+  position: relative;
+  align-content: center;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-top: 10%;
+  /* background-color: rgb(240, 0, 0) */
+  
+}
+
+.rectangle
+{
+  width: 324px;
+  height : 439px;
+  justify-content: space-evenly;
+  /* border-color: black; */
+  box-shadow: 11px 8px 14px rgba(0,0,0,40);
+  border-radius: 5%;
+}
+/* .paper :hover{
+  color: gray;
+  transition : 3s;
+  background-color: rgb(240, 0, 0)
+} */
+
+.rectangle:hover{
+  /* background-color: rgb(97, 96, 96); */
+  
+}
+
+.profile:hover{
+  /* background-color: gray; */
+  /* transform: scale(1.2,1.2); */
+  /* transform: scale(1.2,1.2); */
+  
+}
+
+.color{
+  z-index: 1;
+  border-radius: 5%;
+}
+
+.color:hover{
+  transform: scale(1.1,1.1);
+  background-color: gray;
+  filter: brightness(50%);
+  transition: all ease 1s 0s;
+  /* visibility: visible; */
+
+}
+
+.color:hover .text{
+  visibility: visible;
+  transition: 1s;
+
+}
+
+.text{
+  text-align: left;
+  filter: brightness(200%);
+  color: rgb(252, 252, 252);
+  position:absolute;
+  visibility: hidden;
+}
