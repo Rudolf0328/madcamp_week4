@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-
+import {Link, BrowserRouter as Router} from 'react-router-dom';
+import Fade from "react-reveal/Fade";
 import Dots from "./Dots";
 import First10Million from "./First10Million";
 import FirstColor from "./FirstColor";
@@ -107,23 +108,25 @@ function MainPage() {
     };
   }, []);
   return (
+    <Link to = "/home">
     <div ref={outerDivRef} className="outer">
       {/* <div className="outer"> */}
       {/* <Dots scrollIndex={scrollIndex} /> */}
+      <Fade>
       <img src="./castleDay.gif" width="100%" height="100%"></img>
-        {/* <div className="divider"></div> */}
+      </Fade>
         {/* <div className="inner">
           <FirstEstab></FirstEstab>
         </div>
         <div className="inner">
           <FirstColor></FirstColor>
-        </div> */}
-        {/* <div className="divider"></div> */}
-        {/* <div className="divider"></div> */}
-        {/* <div className="inner">
+        </div>
+        <div className="inner">
           <First10Million></First10Million>
         </div> */}
     </div>
+    
+    </Link>
   );
 }
 

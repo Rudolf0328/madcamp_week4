@@ -6,6 +6,7 @@ import Header from './Header/main';
 
 function App() {
   return (
+    <Router>
     <div className="App">
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -21,9 +22,17 @@ function App() {
           Learn React
         </a>
       </header> */}
+<<<<<<< HEAD
       {/* <MainPage/> */}
       <Header></Header>
+=======
+      <Routes>
+      <Route path = "/" element = {<MainPage/>} />
+      <Route path = "/home" element = {<MainPage/>} />
+      </Routes>
+>>>>>>> origin
     </div>
+    </Router>
   );
 }
 
