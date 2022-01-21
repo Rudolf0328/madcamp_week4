@@ -1,11 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-<<<<<<< HEAD
-=======
-
+// import MainPage from './MainPage/main';
+// import Introduce from './MainPage/main';
 import InfoPage from './InfoPage/main'
-
->>>>>>> 26c2c0045021241440291c80865c71daf3c255d1
 import MainPage from './MainPage/main';
 import Introduce from './MainPage/main';
 import NeedleDrop from './needledrop/needledrop';
