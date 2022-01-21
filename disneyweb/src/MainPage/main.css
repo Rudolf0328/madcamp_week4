@@ -41,15 +41,80 @@ body {
 
 .lineCom {
   display: flex;
-  border-right: 30px solid black;
-  width: 200px;
+  border-right: 20px solid black;
+  width: 288px;
   height: 100%;
   justify-content: flex-start;
   flex-direction: column;
+  position: relative;
 }
 
-.totalDiv {
+.totalDivOne {
   height: 100%;
   width: 100%;
-  flex-direction: row;
+  display: flex;
+  background-image: url('./snowWhite.png');
+  background-position-x: 80%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.totalDivTwo {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-image: url('./mickey.png');
+  background-position-x: 80%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.totalDivThree {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-image: url('./olaf.png');
+  background-position-x: 80%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.circle-in-the-line {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  left: 13%;
+  /* margin-left: 20%; */
+  margin-top: 12%;
+}
+
+.circle-in-the-line-outer {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  left: 248px;
+  /* margin-left: 20%; */
+  margin-top: 50%;
+}
+
+.year-beside-line {
+  position: absolute;
+  left: 95%;
+  top: 5%;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.right-content {
+  text-align: right;
+  margin-top: 50%;
+  margin-left: 300px;
+  font-size: 85px;
+  font-weight: bold;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif */
+  /* font-family: ; */
 }

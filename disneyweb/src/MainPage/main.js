@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 
 import Dots from "./Dots";
+import First10Million from "./First10Million";
 import FirstColor from "./FirstColor";
+import FirstEstab from "./FirstEstab";
 
 import "./main.css";
 
@@ -110,12 +112,16 @@ function MainPage() {
       <img src="./castleDay.gif" width="100%" height="100%"></img>
         {/* <div className="divider"></div> */}
         <div className="inner">
+          <FirstEstab></FirstEstab>
+        </div>
+        <div className="inner">
           <FirstColor></FirstColor>
         </div>
         {/* <div className="divider"></div> */}
-        <div className="inner bg-blue">2</div>
         {/* <div className="divider"></div> */}
-        <div className="inner bg-pink">3</div>
+        <div className="inner">
+          <First10Million></First10Million>
+        </div>
     </div>
   );
 }
