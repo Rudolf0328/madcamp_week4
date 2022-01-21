@@ -5,12 +5,12 @@ body {
 
 .outer {
   height: 100vh;
-  overflow-y: auto;
 }
 
 /* 화면에서 스크롤바 안보이게 */
 .outer::-webkit-scrollbar {
   display: none;
+  position: relative;
 }
 
 .inner {
@@ -48,7 +48,10 @@ body {
   background-repeat: no-repeat;
   background-color: #FAF8DB;
 }
-
+.start{
+  color:#FFFFFF;
+  position: fixed;
+}
 .totalDivTwo {
   height: 100%;
   width: 100%;
