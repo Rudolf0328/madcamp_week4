@@ -110,6 +110,7 @@ function MainPage() {
   return (
     <Link to = "/home">
     <div ref={outerDivRef} className="outer">
+      {/* <div className="outer"> */}
       {/* <Dots scrollIndex={scrollIndex} /> */}
       <Fade>
       <img src="./castleDay.gif" width="100%" height="100%"></img>

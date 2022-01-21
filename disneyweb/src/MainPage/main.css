@@ -44,7 +44,7 @@ body {
   background-image: url('./mouse.png');
   background-position-x: 90%;
   background-position-y: 80%;
-  background-size: 800px;
+  background-size: 30%;
   background-repeat: no-repeat;
   background-color: #FAF8DB;
 }
@@ -57,9 +57,9 @@ body {
   width: 100%;
   display: flex;
   background-image: url('./snowWhite.png');
-  background-position-x: 80%;
+  background-position-x: 85%;
   background-position-y: 80%;
-  background-size: 600px;
+  background-size: 30%;
   background-repeat: no-repeat;
   background-color: #ffe4ea;
 }
@@ -71,7 +71,7 @@ body {
   background-image: url('./olaf2.png');
   background-position-x: 80%;
   background-position-y: 70%;
-  background-size: 600px;
+  background-size: 20%;
   background-repeat: no-repeat;
   background-color: #ddf2fd;
 }
