@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-// import MainPage from './MainPage/main';
-// import Introduce from './MainPage/main';
+
 import InfoPage from './InfoPage/main'
+
 import MainPage from './MainPage/main';
 import Introduce from './MainPage/main';
 import NeedleDrop from './needledrop/needledrop';
@@ -18,7 +18,6 @@ function App() {
       <Route path = "/home" element = {<NeedleDrop/>} />
       <Route path = "/header" element = {<Header/>} />
       <Route path = "/info" element = {<InfoPage/>} />
-
       </Routes>
     </div>
     </Router>
