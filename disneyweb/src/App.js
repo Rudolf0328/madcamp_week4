@@ -17,6 +17,8 @@ function App() {
       <Route path = "/" element = {<MainPage/>} />
       <Route path = "/home" element = {<NeedleDrop/>} />
       <Route path = "/header" element = {<Header/>} />
+      <Route path = "/info" element = {<InfoPage/>} />
+
       </Routes>
     </div>
     </Router>

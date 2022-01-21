@@ -11,8 +11,6 @@ import './Gridstyle.css'
 // I need in the order say 1->3->2(from top to bottom) or say 2->1->3.
 
 
-fetch
-
 class InfoPage extends Component {
   render() {
     return (
