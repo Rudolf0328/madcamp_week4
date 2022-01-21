@@ -1,0 +1,60 @@
+/* for css flex */
+.container {
+  display: flex;
+  height: 15vh;
+  background-color: black;
+}
+
+.item {
+  flex-basis: auto;
+}
+
+.header-background {
+  background-color: black;
+  /* width: 100vh; */
+  height: 15vh;
+}
+
+.logo-diswiki {
+  /* position: absolute; */
+  flex-basis: auto;
+  width: 241px;
+  height: 88.86px;
+  left: 39px;
+  top: 60px;
+  /* background: url(./diswiki.png); */
+}
+
+.header {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+}
+
+.round-image {
+  border-radius: 50%;
+  width: 61px;
+  height: 61px;
+  background: #C4C4C4;
+}
+
+.line-under-tab {
+  width: 163px;
+  height: 13px;
+  background: #191C83;
+}
+
+.line-solid {
+  border-bottom: 13px solid black;
+}
+
+.menu a:after {
+  display:block;
+  width:100%;
+  content: '';
+  border-bottom: solid 13px #191C83;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+.menu a:hover:after {
+  transform: scaleX(1);
+}
