@@ -1,13 +1,4 @@
 /* for css flex */
-.container {
-  display: flex;
-  height: 15vh;
-  background-color: black;
-}
-
-.item {
-  flex-basis: auto;
-}
 
 .header-background {
   background-color: black;
@@ -55,6 +46,16 @@
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
+
 .menu a:hover:after {
   transform: scaleX(1);
 }
+
+.container {
+
+}
+
+/* .item {
+  flex-basis: 100px;
+  width: 100px;
+} */
