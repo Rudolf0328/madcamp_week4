@@ -7,26 +7,31 @@ import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 // import { Tooltip, tooltipClasses } from "@material-ui/core";
 import Zoom from '@mui/material/Zoom';
 
-const CustomWidthTooltip = styled(({ className, ...props }) => (
-  <Tooltip {...props} classes={{ popper: className }} />
-))({
-  [`& .${tooltipClasses.tooltip}`]: {
-    width: 137,
-    // color: '#191C83'
-  },
-});
+// const CustomWidthTooltip = styled(({ className, ...props }) => (
+//   <Tooltip {...props} classes={{ popper: className }} />
+// ))({
+//   [`& .${tooltipClasses.tooltip}`]: {
+//     width: 137,
+//     // color: '#191C83'
+//   },
+// });
 
-const theme = createTheme({
-  components: {
-    MuiTooltip: {
-      styleOverrides: {
-        tooltip: {
-          backgroundColor: "#191C83"
-        }
-      }
-    }
-  }
-});
+// const theme = createTheme({
+//   components: {
+//     MuiTooltip: {
+//       styleOverrides: {
+//         tooltip: {
+//           backgroundColor: "#191C83"
+//         }
+//       }
+//     }
+//   }
+// });
+
+// TODO: 선 가운데로 이동
+// TODO: 글씨 크기 조절
+// TODO: 타이포그래피 버튼으로 변경
+// TODO: 탭 누르면 선이랑 글씨 볼드 유지되게
 
 class Header extends Component {
   render() {
