@@ -40,9 +40,9 @@
 
 .menu a:after {
   display:block;
-  width:100%;
+  width: 137px;
   content: '';
-  border-bottom: solid 13px #191C83;
+  border-bottom: solid 13px #6c8319;
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
@@ -50,10 +50,10 @@
 .menu a:hover:after {
   transform: scaleX(1);
 }
-
+/* 
 .container {
 
-}
+} */
 
 /* .item {
   flex-basis: 100px;
