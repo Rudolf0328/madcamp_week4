@@ -8,6 +8,8 @@ import Introduce from './MainPage/main';
 import NeedleDrop from './needledrop/needledrop';
 import { Routes, Route, BrowserRouter as Router} from "react-router-dom";
 import Header from './Header/main';
+import Sec6 from './sec6/sec6';
+// import Component from './sec6/sec6';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <Route path = "/home" element = {<NeedleDrop/>} />
       <Route path = "/header" element = {<Header/>} />
       <Route path = "/info" element = {<InfoPage/>} />
+      <Route path = "/test" element = {<Sec6/>} />
+  
       </Routes>
     </div>
     </Router>
