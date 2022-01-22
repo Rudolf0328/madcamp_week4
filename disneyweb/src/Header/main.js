@@ -43,11 +43,14 @@ class Header extends Component {
           </Link>
       </Grid>
       <Grid item xs>
-        <ThemeProvider theme={theme}>
-          <CustomWidthTooltip>
-            <Typography color="black" fontSize='24px' align='center' variant="overline" sx={{ fontWeight: 700 }}>작품</Typography>
-          </CustomWidthTooltip>
-        </ThemeProvider>
+        {/* <ThemeProvider theme={theme}>
+          <CustomWidthTooltip> */}
+            <div className = "big">
+              
+            <div color="black" fontSize='24px' align='center' variant="overline" sx={{ fontWeight: 700 }}>작품</div>
+            </div>
+          {/* </CustomWidthTooltip>
+        </ThemeProvider> */}
       </Grid>
       <Grid item xs>
       <ThemeProvider theme={theme}>

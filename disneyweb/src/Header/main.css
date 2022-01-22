@@ -59,3 +59,26 @@
   flex-basis: 100px;
   width: 100px;
 } */
+
+.big {
+  z-index: 1;
+}
+
+.big :hover {
+  transform: scale(1.1,1.1);
+  
+}
+
+.big :hover .text{
+  display:block;
+  width: 137px;
+  content: '';
+  border-bottom: solid 13px #191C83;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  visibility: visible;
+}
+
+.text {
+  visibility: hidden;
+}
