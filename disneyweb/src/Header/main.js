@@ -7,26 +7,31 @@ import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 // import { Tooltip, tooltipClasses } from "@material-ui/core";
 import Zoom from '@mui/material/Zoom';
 
-const CustomWidthTooltip = styled(({ className, ...props }) => (
-  <Tooltip {...props} classes={{ popper: className }} />
-))({
-  [`& .${tooltipClasses.tooltip}`]: {
-    width: 137,
-    // color: '#191C83'
-  },
-});
+// const CustomWidthTooltip = styled(({ className, ...props }) => (
+//   <Tooltip {...props} classes={{ popper: className }} />
+// ))({
+//   [`& .${tooltipClasses.tooltip}`]: {
+//     width: 137,
+//     // color: '#191C83'
+//   },
+// });
 
-const theme = createTheme({
-  components: {
-    MuiTooltip: {
-      styleOverrides: {
-        tooltip: {
-          backgroundColor: "#191C83"
-        }
-      }
-    }
-  }
-});
+// const theme = createTheme({
+//   components: {
+//     MuiTooltip: {
+//       styleOverrides: {
+//         tooltip: {
+//           backgroundColor: "#191C83"
+//         }
+//       }
+//     }
+//   }
+// });
+
+// TODO: 선 가운데로 이동
+// TODO: 글씨 크기 조절
+// TODO: 타이포그래피 버튼으로 변경
+// TODO: 탭 누르면 선이랑 글씨 볼드 유지되게
 
 class Header extends Component {
   render() {
@@ -46,25 +51,26 @@ class Header extends Component {
         {/* <ThemeProvider theme={theme}>
           <CustomWidthTooltip> */}
             <div className = "big">
-              
-            <div color="black" fontSize='24px' align='center' variant="overline" sx={{ fontWeight: 700 }}>작품</div>
+              <div className="to-right-underline">
+              <div color="black" fontSize='24px' align='center' variant="overline" sx={{ fontWeight: 700 }}>작품</div>
+              </div>
             </div>
           {/* </CustomWidthTooltip>
         </ThemeProvider> */}
       </Grid>
       <Grid item xs>
-      <ThemeProvider theme={theme}>
-          <CustomWidthTooltip TransitionComponent={Zoom}>
-            <Typography color="black" fontSize='24px' align='center' variant="overline" sx={{ fontWeight: 700 }}>음악</Typography>
-          </CustomWidthTooltip>
-        </ThemeProvider>
+      <div className = "big">
+      <div className="to-right-underline">
+              <div color="black" fontSize='24px' align='center' variant="overline" sx={{ fontWeight: 700 }}>음악</div>
+              </div>
+            </div>
       </Grid>
       <Grid item xs>
-      <ThemeProvider theme={theme}>
-          <CustomWidthTooltip>
-            <Typography color="black" fontSize='24px' align='center' variant="overline" sx={{ fontWeight: 700 }}>미니게임</Typography>
-          </CustomWidthTooltip>
-        </ThemeProvider>
+      <div className = "big">
+      <div className="to-right-underline">
+              <div color="black" fontSize='24px' align='center' variant="overline" sx={{ fontWeight: 700 }}>미니게임</div>
+              </div>
+            </div>
       </Grid>
       
       <Grid item xs container alignItems='center'>

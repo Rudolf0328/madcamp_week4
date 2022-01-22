@@ -66,7 +66,7 @@
 
 .big :hover {
   transform: scale(1.1,1.1);
-  
+  font-weight: bold;
 }
 
 .big :hover .text{
@@ -81,4 +81,51 @@
 
 .text {
   visibility: hidden;
+}
+
+.to-right-underline{
+  position: relative;
+}
+.to-right-underline:after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  width: 0px;
+  height: 13px;
+  margin: 5px 0 0;
+  transition: all 0.2s ease-in-out;
+  transition-duration: 0.3s;
+  align-items: center;
+  opacity: 0;
+  background-color: #191C83;
+}
+.to-right-underline:hover:after{
+  /* width: 100%; */
+  width: 163px;
+  opacity: 1;
+}
+
+.spread-underline {
+  color: #333;
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 0;
+  position: relative;
+}
+.spread-underline:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  /* left: 50%; */
+  position: absolute;
+  background: #191C83;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.spread-underline:hover:after { 
+  width: 137px; 
+  left: 0; 
 }
