@@ -5,6 +5,7 @@ import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import { Grid, Link, Typography } from "@mui/material";
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 // import { Tooltip, tooltipClasses } from "@material-ui/core";
+import Zoom from '@mui/material/Zoom';
 
 const CustomWidthTooltip = styled(({ className, ...props }) => (
   <Tooltip {...props} classes={{ popper: className }} />
@@ -50,7 +51,7 @@ class Header extends Component {
       </Grid>
       <Grid item xs>
       <ThemeProvider theme={theme}>
-          <CustomWidthTooltip>
+          <CustomWidthTooltip TransitionComponent={Zoom}>
             <Typography color="black" fontSize='24px' align='center' variant="overline" sx={{ fontWeight: 700 }}>음악</Typography>
           </CustomWidthTooltip>
         </ThemeProvider>
