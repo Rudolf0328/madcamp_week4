@@ -23,7 +23,7 @@ class InfoPage extends Component {
             <div className= "color">
             
             <div className = "rectangle" >
-            <div class="text" > Hello! </div>
+            <div className="text" > Hello! </div>
             <div >
                 <img src="female7.jpg" className="profile"></img>
             </div>
