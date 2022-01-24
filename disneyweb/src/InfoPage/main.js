@@ -3,6 +3,7 @@ import { AppBar, Grid, withStyles, Paper } from "@material-ui/core";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import { MDBSmoothScroll } from "mdbreact";
 import './Gridstyle.css'
+import Header from "../Header/main";
 
 
 // QUESTION:
@@ -13,6 +14,8 @@ import './Gridstyle.css'
 class InfoPage extends Component {
   render() {
     return (
+      <div>
+        <Header></Header>
       <div className="container">
         <Grid container spacing={6} justify="flex-start">
           <Grid item xs={12} sm={6} md={4} lg={4}>
@@ -95,6 +98,7 @@ class InfoPage extends Component {
             
 
         </Grid>
+      </div>
       </div>
     );
   }
