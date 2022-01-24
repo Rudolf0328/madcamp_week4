@@ -1,75 +1,75 @@
 import React, { Component } from "react";
 import dance_play from "./dance.mp4"
-// import $ from jQuery
+import $ from 'jquery';
 
 
-// document.querySelector(function(){
+function Dance () {
+    
 
-//     var svgPath = document.querySelector('#ggang_svg path');
-//     var isPlay = false;
+    $(function(){
 
-//     function svgSet(){
-
-//         svgPath[0].style.strokeDasharray = svgPath[0].getTotalLength() + ',' + svgPath[0].getTotalLength();
-//         svgPath[0].style.strokeDashoffset = svgPath[0].getTotalLength();
-
-//     }
-
-//     function init(){
-//         svgSet();
-//         drawSvg();
-//     }
-
-//     function drawSvg(){
-
-//         var winScrollTop = document.querySelector(window).scrollTop;
-//         var scrollHeight = document.querySelector(document).height();
-//         var scrollRealHeight = scrollHeight - document.querySelector(window).height();
-//         var parallaxPercent = (winScrollTop / scrollRealHeight * 100) * 1.5;
-
-//         var parallaxStartValue = svgPath[0].getTotalLength();
-//         var parallaxMoveDistance = Math.max(parallaxStartValue - parallaxStartValue, Math.min(parallaxStartValue, parallaxStartValue - (parallaxStartValue * (parallaxPercent/100)))); //패럴럭스 요소가 움직일 거리를 구합니다
-
-//         svgPath[0].style.strokeDashoffset = parallaxMoveDistance;
-
-//         if(parallaxPercent >= 100 && !isPlay){
-
-//             isPlay = true;
-//             document.querySelector('.video_wrap').css({ opacity:1 });
-
-//             setTimeout(function(){
-//                 document.querySelector('.video_wrap').querySelector('video')[0].play();
-
-//                 document.querySelector('.svg_wrap').css({ opacity:0 });
-//             },500)
-
-//         }else if(parallaxPercent < 100 && isPlay){
-
-//             isPlay = false;
-//             document.querySelector('.video_wrap').css({ opacity:0 });
-
-//             document.querySelector('.video_wrap').querySelector('video')[0].pause();
-//             document.querySelector('.video_wrap').querySelector('video')[0].currentTime = 0;
-
-//             document.querySelector('.svg_wrap').css({ opacity:1 });
-
-//         }
-
-//     }
-
-//     document.querySelector(window).scroll(function(){
-//         drawSvg();
-//     })
-
-//     init();
-
-
-// });
-class Dance extends Component {
+        var svgPath = $('#ggang_svg path');
+        var isPlay = false;
+    
+        function svgSet(){
+    
+            svgPath[0].style.strokeDasharray = svgPath[0].getTotalLength() + ',' + svgPath[0].getTotalLength();
+            svgPath[0].style.strokeDashoffset = svgPath[0].getTotalLength();
+    
+        }
+    
+        function init(){
+            svgSet();
+            drawSvg();
+        }
+    
+        function drawSvg(){
+    
+            var winScrollTop = $(window).scrollTop();
+            var scrollHeight = $(document).height();
+            var scrollRealHeight = scrollHeight - $(window).height();
+            var parallaxPercent = (winScrollTop / scrollRealHeight * 100) * 1.5;
+    
+            var parallaxStartValue = svgPath[0].getTotalLength();
+            var parallaxMoveDistance = Math.max(parallaxStartValue - parallaxStartValue, Math.min(parallaxStartValue, parallaxStartValue - (parallaxStartValue * (parallaxPercent/100)))); //패럴럭스 요소가 움직일 거리를 구합니다
+    
+            svgPath[0].style.strokeDashoffset = parallaxMoveDistance;
+    
+            if(parallaxPercent >= 100 && !isPlay){
+    
+                isPlay = true;
+                $('.video_wrap').css({ opacity:1 });
+    
+                setTimeout(function(){
+                    $('.video_wrap').find('video')[0].play();
+    
+                    $('.svg_wrap').css({ opacity:0 });
+                },500)
+    
+            }else if(parallaxPercent < 100 && isPlay){
+    
+                isPlay = false;
+                $('.video_wrap').css({ opacity:0 });
+    
+                $('.video_wrap').find('video')[0].pause();
+                $('.video_wrap').find('video')[0].currentTime = 0;
+    
+                $('.svg_wrap').css({ opacity:1 });
+    
+            }
+    
+        }
+    
+        $(window).scroll(function(){
+            drawSvg();
+        })
+    
+        init();
     
     
+    });
     
-    render(){
+
     return (
         <div class="wrap">
         <h2 class="fix_tit">
@@ -86,7 +86,7 @@ class Dance extends Component {
         </figure>
     </div>
     )
+
     }
-}
 
 export default (Dance);

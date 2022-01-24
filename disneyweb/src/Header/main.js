@@ -53,9 +53,9 @@ class Header extends Component {
           <CustomWidthTooltip> */}
             <div className = "big">
               <div className="to-right-underline">
-                <a  href="file:///C:/Users/kevin/Desktop/20220113_ggang_lesson/20220113_ggang_lesson/ggang_lesson/section6/step1/complete.html">
+                <Link to="./info" style={{ textDecoration: 'none' }}>
                 <div color="black" fontSize='24px' align='center' variant="overline" sx={{ fontWeight: 700 }}>작품</div>
-                </a>
+                </Link>
               
               </div>
             </div>
