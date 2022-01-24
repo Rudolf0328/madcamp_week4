@@ -1,7 +1,8 @@
 import { Box } from "@mui/system";
 import { Component } from "react";
 import './main.css';
-import { Grid, Link, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
+import { Link } from "react-router-dom"
 
 class Header extends Component {
   render() {
