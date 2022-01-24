@@ -2,13 +2,8 @@ import logo from './logo.svg';
 // import './App.css';
 
 import InfoPage from './InfoPage/main'
-<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import MainPage from './MainPage/main';
-=======
-
-// import MainPage from './MainPage/main';
->>>>>>> a5cc230c2b55b176acd5b21092d74ab93ae8d5df
 import NeedleDrop from './needledrop/needledrop';
 import { Routes, Route, BrowserRouter as Router} from "react-router-dom";
 import Header from './Header/main';
@@ -27,6 +22,7 @@ import Bingbing2 from './bingbing2/bingbing2';
 // import Carousel from './MusicPage/Carousel';
 import MusicPage from './MusicPage/MusicPage';
 import CharacterPage from './CharacterPage/CharacterPage';
+import Character from './CharacterPage/Character';
 // import Component from './sec6/sec6';
 
 function App() {
@@ -45,14 +41,8 @@ function App() {
     {/* <div className="App"> */}
     <Header/>
       <Routes>
-<<<<<<< HEAD
      <Route path = "/" element = {<MainPage/>} />
       <Route path = "/home" element = {<NeedleDrop sound = {sound} setSound = {setSound} auto = {auto} setAuto = {setAuto} currentT = {currentT} setCurrentT = {setCurrentT}/>}/>
-=======
-     {/* <Route path = "/" element = {<MainPage/>} /> */}
-       <Route path = "/home" element = {<NeedleDrop/>} /> 
-       <Route path = "/header" element = {<Header/>} /> 
->>>>>>> a5cc230c2b55b176acd5b21092d74ab93ae8d5df
       <Route path = "/info" element = {<InfoPage/>} />
       <Route path = "/test" element = {<Sec6/>} /> 
        <Route path = "/music" element = {<Wheel/>} />
@@ -71,14 +61,7 @@ function App() {
 
       {/* <Route path = "/test2" element = {<Sec5/>} /> */}
       <Route path = "/test3" element = {<Dance/>} />
-<<<<<<< HEAD
-=======
-
-      <Route path = "/characters" element = {<CharacterPage/>} />
-
-
-
->>>>>>> a5cc230c2b55b176acd5b21092d74ab93ae8d5df
+      <Route path = "/characters" element = {<Character/>} />
       </Routes>
     {/* </div> */}
     </Router>
