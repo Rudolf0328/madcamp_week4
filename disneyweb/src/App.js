@@ -15,6 +15,9 @@ import Card from './Card/card'
 import Bingbing from './bingbing/bingbing';
 import Bingbing2 from './bingbing2/bingbing2';
 
+// import Carousel from './MusicPage/Carousel';
+import MusicPage from './MusicPage/MusicPage';
+// import Component from './sec6/sec6';
 
 function App() {
   return (
@@ -34,6 +37,14 @@ function App() {
        <Route path = "/bingbing2" element = {<Bingbing2/>} />
 
 
+      <Route path = "/test" element = {<Sec6/>} />
+
+      <Route path = "/music" element = {<Wheel/>} />
+      {/* <Route path = "/carousel" element = {<Carousel/>} /> */}
+      <Route path = "/please" element = {<MusicPage/>} />
+
+      {/* <Route path = "/test2" element = {<Sec5/>} /> */}
+      <Route path = "/test3" element = {<Dance/>} />
 
 
 

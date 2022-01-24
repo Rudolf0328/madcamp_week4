@@ -12,6 +12,8 @@ import mson6 from "./images/mson6.jpg"
 import mson7 from "./images/mson7.jpg"
 import mson8 from "./images/mson8.jpg"
 import mson9 from "./images/mson9.jpg"
+// import $ from 'jquery';
+// import jquery from 'jquery';
 import $ from 'jquery';
 
 
