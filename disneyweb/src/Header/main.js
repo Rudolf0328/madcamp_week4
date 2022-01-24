@@ -1,6 +1,7 @@
 import { Box } from "@mui/system";
 import { Component } from "react";
 import './main.css';
+<<<<<<< HEAD
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import { Grid, Typography } from "@mui/material";
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
@@ -33,6 +34,10 @@ import Zoom from '@mui/material/Zoom';
 // TODO: 글씨 크기 조절
 // TODO: 타이포그래피 버튼으로 변경
 // TODO: 탭 누르면 선이랑 글씨 볼드 유지되게
+=======
+import { Grid, Typography } from "@mui/material";
+import { Link } from "react-router-dom"
+>>>>>>> wk
 
 class Header extends Component {
   render() {
