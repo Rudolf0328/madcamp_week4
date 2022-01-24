@@ -4,6 +4,7 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import { MDBSmoothScroll } from "mdbreact";
 import './Gridstyle.css'
 import Header from "../Header/main";
+import { Link } from "react-router-dom"
 
 
 // QUESTION:
@@ -37,61 +38,85 @@ class InfoPage extends Component {
             <Grid item xs={12} sm={6} md={4} lg={4}>
             <div>
             &nbsp;
-            </div>
-            <div className="individual">
-            <Paper className = "paper">
+            </div >
+            <div className="individual" >
+            <div className= "color">
+            
+            <div className = "rectangle" >
+            <div className="text" > Hello! </div>
             <div >
                 <img src="female7.jpg" className="profile"></img>
-              </div>
-            </Paper>
+            </div>
+            </div>
+            </div>
             </div>
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={4}>
             <div>
             &nbsp;
-            </div>
-            <div className="individual">
-            <Paper className = "paper">
+            </div >
+            <div className="individual" >
+            <div className= "color">
+            
+            <div className = "rectangle" >
+            <div className="text" > Hello! </div>
             <div >
                 <img src="female7.jpg" className="profile"></img>
-              </div>
-            </Paper>
+            </div>
+            </div>
+            </div>
             </div>
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={4}>
             <div>
             &nbsp;
-            </div>
-            <div className="individual">
-            <Paper className = "paper">
+            </div >
+            <div className="individual" >
+            <div className= "color">
+            
+            <div className = "rectangle" >
+            <div className="text" > Hello! </div>
             <div >
                 <img src="female7.jpg" className="profile"></img>
-              </div>
-            </Paper>
+            </div>
+            </div>
+            </div>
             </div>
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={4}>
             <div>
             &nbsp;
-            </div>
-            <div className="individual">
-            <Paper className = "paper">
+            </div >
+            <div className="individual" >
+            <div className= "color">
+            
+            <div className = "rectangle" >
+            <div className="text" > Hello! </div>
             <div >
                 <img src="female7.jpg" className="profile"></img>
-              </div>
-            </Paper>
+            </div>
+            </div>
+            </div>
             </div>
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={4}>
             <div>
             &nbsp;
-            </div>
-            <div className="individual">
-            <Paper className = "paper">
+            </div >
+            <div className="individual" >
+            <div className= "color">
+            
+            <Link to = "/test2">
+            <div className = "rectangle"  >
+              
+            <div className="text_movie" > Hello! </div>
             <div >
                 <img src="female7.jpg" className="profile"></img>
-              </div>
-            </Paper>
+            </div>
+            
+            </div>
+            </Link>
+            </div>
             </div>
             </Grid>
 

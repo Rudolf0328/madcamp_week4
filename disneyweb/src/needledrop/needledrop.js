@@ -5,7 +5,6 @@ import lp from './lp.png'
 import frozen from './frozen.png'
 import arm from './arm.png'
 import circle from './circle.png'
-import FirstEstab from "../MainPage/FirstEstab";
 let toggle = "stop";
 const NeedleDrop =()=>{
     // Math.degrees = function(radians) {
