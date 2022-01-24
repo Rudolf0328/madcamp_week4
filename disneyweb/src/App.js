@@ -13,6 +13,7 @@ import Sec5 from './sec5/sec5';
 import Dance from './Dance/dance'
 // import Carousel from './MusicPage/Carousel';
 import MusicPage from './MusicPage/MusicPage';
+import CharacterPage from './CharacterPage/CharacterPage';
 // import Component from './sec6/sec6';
 
 function App() {
@@ -32,6 +33,8 @@ function App() {
 
       {/* <Route path = "/test2" element = {<Sec5/>} /> */}
       <Route path = "/test3" element = {<Dance/>} />
+
+      <Route path = "/characters" element = {<CharacterPage/>} />
 
 
 
