@@ -6,6 +6,8 @@ import $ from 'jquery';
 function Dance () {
     
 
+    $(function(){
+
         var svgPath = $('#ggang_svg path');
         var isPlay = false;
     
@@ -18,9 +20,6 @@ function Dance () {
     
         function init(){
             svgSet();
-            console.log(svgPath)
-            console.log(svgPath[0])
-            console.log("hello")
             drawSvg();
         }
     
@@ -34,7 +33,7 @@ function Dance () {
             var parallaxStartValue = svgPath[0].getTotalLength();
             var parallaxMoveDistance = Math.max(parallaxStartValue - parallaxStartValue, Math.min(parallaxStartValue, parallaxStartValue - (parallaxStartValue * (parallaxPercent/100)))); //패럴럭스 요소가 움직일 거리를 구합니다
     
-            // svgPath[0].style.strokeDashoffset = parallaxMoveDistance;
+            svgPath[0].style.strokeDashoffset = parallaxMoveDistance;
     
             if(parallaxPercent >= 100 && !isPlay){
     
@@ -67,6 +66,8 @@ function Dance () {
     
         init();
     
+    
+    });
     
 
     return (

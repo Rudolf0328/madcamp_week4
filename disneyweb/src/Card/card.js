@@ -5,7 +5,7 @@ import { useDrag } from 'react-use-gesture'
 import { useScroll } from 'react-use-gesture'
 
 import './cardstyle.css'
-
+  
 const cards = [
 "https://upload.wikimedia.org/wikipedia/en/5/5e/Elsa_from_Disney%27s_Frozen.png",
 "https://w.namu.la/s/193611c383f1c9629d6212dd7c656b8d46694986bf85d4528a5567de0c9534b1a9775973bb235c90d168d130798d01181ddf7cca2bbbef3cf17661479f3615a303ff27c19079ee3302c5bbde7f6e9cb5",
@@ -41,10 +41,19 @@ function Card() {
   })
   // Now we're just mapping the animated values to our view, that's it. Btw, this component only renders once. :-)
   return props.map(({ x, y, rot, scale }, i) => (
+    <div className='lroot'>
+      <div className = "dd">
     <animated.div key={i} style={{ x, y }}>
+    
       {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
       <animated.div {...bind(i)} style={{ transform: interpolate([rot, scale], trans), backgroundImage: `url(${cards[i]})` }} />
+      
     </animated.div>
+    
+    </div>
+    </div>
+    
+ 
   ))
 }
 

@@ -14,14 +14,15 @@ body {
     /* overflow: auto; */
     /* height: auto; */
     /* overflow-x: hidden; */
-    flex-wrap: wrap;
-    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
     /* overflow-x: scroll; */
     /* overflow-y: scroll; */
     /* overflow-x: hidden; */
     /* max-height: 1000px; */
-    justify-content: space-evenly;
+    justify-content: space-around;
     /* overflow: scroll; */
+
 
   }
 
@@ -103,8 +104,9 @@ body {
 
 }
 
-.text{
+.text_movie{
   text-align: left;
+  margin-left: 10px;
   filter: brightness(200%);
   color: rgb(252, 252, 252);
   position:absolute;
