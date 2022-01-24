@@ -75,6 +75,7 @@ function Sec5(){
         parallaxList.eq(1).css({ // 계산된 값을 css를 이용해 적용합니다
             transform : 'translate(0px,'+ parallaxMoveDistance * 2.1 +'px)'
         });
+        
 
         parallaxList.eq(2).css({ // 계산된 값을 css를 이용해 적용합니다
             transform : 'translate(0px,'+ parallaxMoveDistance * 2.5 +'px)'
