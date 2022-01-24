@@ -8,53 +8,57 @@ import './sec6style.css'
 class Sec6 extends Component {
     render(){
     return (
-        <div class="wrap">
-        <header class="header_wrap">
-            <div class="logo">GGANG CODING</div>
+        <div className="wrap">
+        <header className="header_wrap">
+            <div className="logo">GGANG CODING</div>
         </header>
-        <section class="sec01 active">
-            <article class="inner">
-                <div class="tb_row">
-                    <div class="tb_cell">
-                        <nav class="nav_list">
-                            <ul class="list">
+        <section className="sec01 active">
+            <article className="inner">
+                <div className="tb_row">
+                    <div className="tb_cell">
+                        <nav className="nav_list">
+                            <ul className="list">
                                 <li>
-                                    <a href="" class="active">
-                                        <span class="txt">TODAY</span>
-                                        <span class="mask"></span> 
-                                        <span class="mask2"></span> 
+                                    <a href="" className="active">
+                                        <span className="txt">TODAY</span>
+                                        <span className="mask"></span> 
+                                        <span className="mask2"></span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="">
-                                        <span class="txt">IMAGE Mask</span>
-                                        <span class="mask"></span>
-                                        <span class="mask2"></span>
+                                        <span className="txt">IMAGE Mask</span>
+                                        <span className="mask"></span>
+                                        <span className="mask2"></span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="">
-                                        <span class="txt">TEXT Mask</span>
-                                        <span class="mask"></span>
-                                        <span class="mask2"></span>
+                                        <span className="txt">TEXT Mask</span>
+                                        <span className="mask"></span>
+                                        <span className="mask2"></span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="">
-                                        <span class="txt">OVERLAP</span>
-                                        <span class="mask"></span>
-                                        <span class="mask2"></span>
+                                        <span className="txt">OVERLAP</span>
+                                        <span className="mask"></span>
+                                        <span className="mask2"></span>
                                     </a>
                                 </li>
+                                
+                                
+                
+                                
                             </ul>
                         </nav>
                     </div>
                 </div>
-                <div class="bg_rotate"></div>
+                <div className="bg_rotate"></div>
             </article>
         </section>
-        <footer class="footer">
-            <div class="text_area">
+        <footer className="footer">
+            <div className="text_area">
                 <p>
                     2020 GGANG CODING. 당신의 열정을 응원합니다. :)
                 </p>
