@@ -2,8 +2,9 @@ import { Box } from "@mui/system";
 import { Component } from "react";
 import './main.css';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
-import { Grid, Link, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
+import {Link} from "react-router-dom";
 // import { Tooltip, tooltipClasses } from "@material-ui/core";
 import Zoom from '@mui/material/Zoom';
 
@@ -43,7 +44,7 @@ class Header extends Component {
       backgroundColor: 'white',
     }} className="header">
       <Grid item xs alignItems="flex-start">
-          <Link to="/home">
+          <Link to="/">
             <img src="./diswiki.png" align='left' width='241px' height='88.86px'></img>
           </Link>
       </Grid>
@@ -61,13 +62,16 @@ class Header extends Component {
           {/* </CustomWidthTooltip>
         </ThemeProvider> */}
       </Grid>
-      <Grid item xs>
-      <div className = "big">
-      <div className="to-right-underline">
-              <div color="black" fontSize='24px' align='center' variant="overline" sx={{ fontWeight: 700 }}>음악</div>
+      <Link to = "/home" style={{textDecoration: "none"}}>
+        <Grid item xs>
+        <div className = "big">
+        <div className="to-right-underline">
+                <div color="black" fontSize='24px' align='center' variant="overline" sx={{ fontWeight: 700 }}>음악</div>
+                
+                </div>
               </div>
-            </div>
       </Grid>
+      </Link>
       <Grid item xs>
       <div className = "big">
       <div className="to-right-underline">

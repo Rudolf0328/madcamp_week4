@@ -81,7 +81,7 @@ body {
   
 }
 
-.color{
+/* .color{
   z-index: 1;
   border-radius: 5%;
 }
@@ -91,7 +91,7 @@ body {
   background-color: gray;
   filter: brightness(50%);
   transition: all ease 1s 0s;
-  /* visibility: visible; */
+
 
 }
 
@@ -107,4 +107,4 @@ body {
   color: rgb(252, 252, 252);
   position:absolute;
   visibility: hidden;
-}
+} */
