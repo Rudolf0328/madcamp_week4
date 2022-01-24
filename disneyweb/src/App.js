@@ -9,6 +9,7 @@ import NeedleDrop from './needledrop/needledrop';
 import { Routes, Route, BrowserRouter as Router} from "react-router-dom";
 import Header from './Header/main';
 import Sec6 from './sec6/sec6';
+import Wheel from './MusicPage/Wheel';
 // import Component from './sec6/sec6';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Route path = "/header" element = {<Header/>} />
       <Route path = "/info" element = {<InfoPage/>} />
       <Route path = "/test" element = {<Sec6/>} />
+      <Route path = "/music" element = {<Wheel/>} />
   
       </Routes>
     </div>
