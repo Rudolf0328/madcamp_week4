@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import InfoPage from './InfoPage/main'
 
 // import MainPage from './MainPage/main';
-// import NeedleDrop from './needledrop/needledrop';
+import NeedleDrop from './needledrop/needledrop';
 import { Routes, Route, BrowserRouter as Router} from "react-router-dom";
 // import Header from './Header/main';
 import Sec6 from './sec6/sec6';
@@ -18,7 +18,7 @@ function App() {
     {/* <div className="App"> */}
       <Routes>
      {/* <Route path = "/" element = {<MainPage/>} /> */}
-      {/* <Route path = "/home" element = {<NeedleDrop/>} /> */}
+      <Route path = "/home" element = {<NeedleDrop/>} />
       {/* <Route path = "/header" element = {<Header/>} />  */}
       <Route path = "/info" element = {<InfoPage/>} />
       <Route path = "/test" element = {<Sec6/>} />

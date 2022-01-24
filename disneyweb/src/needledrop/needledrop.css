@@ -1,7 +1,6 @@
 .player{
-    position: relative;
-    display: flex;
-    overflow-y: calc();
+    /* position: relative;
+    display: flex; */
 }
 .lppan{
     align-content: center;
