@@ -16,8 +16,8 @@ import s1 from "../src/needledrop/Do You Want to Build a Snowman.mp3";
 import s2 from "../src/needledrop/Let It Go.mp3";
 import s3 from "../src/needledrop/Frozen Heart.mp3";
 import Card from './Card/card'
-import Bingbing from './bingbing/bingbing';
-import Bingbing2 from './bingbing2/bingbing2';
+// import Bingbing from './bingbing/bingbing';
+// import Bingbing2 from './bingbing2/bingbing2';
 import Bingbing3 from './bingbing3/bingbing3';
 // import Bingbing4 from './bingbing4/bingbing4';
 
@@ -51,8 +51,8 @@ function App() {
        <Route path = "/test2" element = {<Sec5/>} />
       <Route path = "/test3" element = {<Dance/>} /> 
        <Route path = "/card" element = {<Card/>} />
-       <Route path = "/bingbing" element = {<Bingbing/>} />
-       <Route path = "/bingbing2" element = {<Bingbing2/>} />
+       {/* <Route path = "/bingbing" element = {<Bingbing/>} /> */}
+       {/* <Route path = "/bingbing2" element = {<Bingbing2/>} /> */}
        <Route path = "/bingbing3" element = {<Bingbing3/>} />
        {/* <Route path = "/bingbing4" element = {<Bingbing4/>} /> */}
 
