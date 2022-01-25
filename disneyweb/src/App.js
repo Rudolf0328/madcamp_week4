@@ -19,6 +19,7 @@ import Bingbing3 from './bingbing3/bingbing3';
 
 
 
+
 function App() {
   return (
     <Router>
@@ -37,6 +38,8 @@ function App() {
        {/* <Route path = "/bingbing2" element = {<Bingbing2/>} /> */}
        <Route path = "/bingbing3" element = {<Bingbing3/>} />
        {/* <Route path = "/bingbing4" element = {<Bingbing4/>} /> */}
+
+
 
 
 
