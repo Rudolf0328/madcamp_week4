@@ -84,7 +84,7 @@ body {
   
 }
 
-/* .color{
+.color{
   z-index: 1;
   border-radius: 5%;
 }
@@ -111,4 +111,4 @@ body {
   color: rgb(252, 252, 252);
   position:absolute;
   visibility: hidden;
-} */
+}
