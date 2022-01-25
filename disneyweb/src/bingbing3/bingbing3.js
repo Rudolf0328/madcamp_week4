@@ -12,15 +12,16 @@ import disney_group2 from "./disney_group2.jpg"
 function Bingbing3() {
     
     var pages = document.getElementsByClassName('page');
+    console.log(pages, "pages")
     
     // [...pages].reverse();
     for(var i = 0; i < pages.length; i++)
       {
         var page = pages[i];
-        if (i % 2 === 0)
-          {
-            page.style.zIndex = (pages.length - i);
-          }
+        // if (i % 2 === 0)
+        //   {
+        //     page.style.zIndex = (pages.length - i);
+        //   }
       }
   
     document.addEventListener('DOMContentLoaded', function(){
@@ -29,6 +30,7 @@ function Bingbing3() {
 
           //Or var page = pages[i];
           pages[i].pageNum = i + 1;
+          console.log(pages[i].pageNum, "pagenum")
           
           pages[i].onclick=function()
             {
@@ -36,8 +38,8 @@ function Bingbing3() {
                 {
                     console.log(this.pageNum)
                     console.log(pages)
-                  this.classList.remove('flipped');
-                  this.previousElementSibling.classList.remove('flipped');
+                    this.classList.remove('flipped');
+                     this.previousElementSibling.classList.remove('flipped');
                 }
               else
                 {
@@ -46,6 +48,7 @@ function Bingbing3() {
                   this.classList.add('flipped');
                   this.nextElementSibling.classList.add('flipped');
                 }
+                
              }
           }
     })

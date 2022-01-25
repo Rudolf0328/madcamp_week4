@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {Carousel} from '3d-react-carousal';
 import "./bingstyle.css"
+import { Link } from "react-router-dom";
 
 
 
@@ -12,35 +13,35 @@ const _items = [
         player: {
             title: 'Efren Reyes',
             desc: 'Known as "The Magician", Efren Reyes is well regarded by many professionals as the greatest all around player of all time.',
-            image: 'https://i.postimg.cc/RhYnBf5m/er-slider.jpg',
+            image: './al1.jpg',
         },
     },
     {
         player: {
             title: "Ronnie O'Sullivan",
             desc: "Ronald Antonio O'Sullivan is a six-time world champion and is the most successful player in the history of snooker.",
-            image: 'https://i.postimg.cc/qBGQNc37/ro-slider.jpg',
+            image:'./al2.jpg',
         },
     },
     {
         player: {
             title: 'Shane Van Boening',
             desc: 'The "South Dakota Kid" is hearing-impaired and uses a hearing aid, but it has not limited his ability.',
-            image: 'https://i.postimg.cc/cHdMJQKG/svb-slider.jpg',
+            image: './al3.jpg'
         },
     },
     {
         player: {
             title: 'Mike Sigel',
             desc: 'Mike Sigel or "Captain Hook" as many like to call him is an American professional pool player with over 108 tournament wins.',
-            image: 'https://i.postimg.cc/C12h7nZn/ms-1.jpg',
+            image: './al6.jpg',
         },
     },
     {
         player: {
             title: 'Willie Mosconi',
             desc: 'Nicknamed "Mr. Pocket Billiards," Willie Mosconi was among the first Billiard Congress of America Hall of Fame inductees.',
-            image: 'https://i.postimg.cc/NfzMDVHP/willie-mosconi-slider.jpg',
+            image: './al5.jpg',
         },
     },
 ];
@@ -63,7 +64,7 @@ const createItem = (position, idx) => {
     switch (position) {
         case length - 1:
         case length + 1:
-            item.styles = {...item.styles, filter: 'grayscale(1)'};
+            item.styles = {...item.styles};
             break;
         case length:
             break;
@@ -79,9 +80,11 @@ const CarouselSlideItem = ({pos, idx, activeIdx}) => {
     const item = createItem(pos, idx, activeIdx);
 
     return (
+        
         <li className="carousel__slide-item" style={item.styles}>
             <div className="carousel__slide-item-img-link">
-                <img src={item.player.image} alt={item.player.title} />
+                <img src={item.player.image} alt={item.player.title}>
+                </img>
             </div>
             <div className="carousel-slide-item__body">
                 <h4>{item.player.title}</h4>
@@ -139,8 +142,12 @@ const Bingbing = () => {
                     <i className="carousel__btn-arrow carousel__btn-arrow--left" />
                 </button>
                 <div className="carousel__container">
+                
                     <ul className="carousel__slide-list">
-                        {items.map((pos, i) => (
+          <Link to="/home">
+                        
+                        {
+                        items.map((pos, i) => (
                             <CarouselSlideItem
                                 key={i}
                                 idx={i}
@@ -148,6 +155,7 @@ const Bingbing = () => {
                                 activeIdx={activeIdx}
                             />
                         ))}
+                        </Link>
                     </ul>
                 </div>
                 <button className="carousel__btn carousel__btn--next" onClick={() => nextClick()}>

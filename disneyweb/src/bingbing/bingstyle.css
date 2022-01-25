@@ -1,4 +1,4 @@
-/* html {
+html {
     box-sizing: border-box;
     font-size: 10px;
   }
@@ -78,7 +78,7 @@
   }
   
   .carousel__slide-item-img-link {
-    cursor: zoom-in;
+    /* cursor: zoom-in; */
     display: flex;
     height: 100%;
     overflow: hidden;
@@ -95,7 +95,7 @@
     align-items: center;
     background: rgba(0, 0, 0, 0.5);
     color: white;
-    content: "read more";
+    content: "Listen";
     display: flex;
     height: 100%;
     justify-content: center;
@@ -131,6 +131,7 @@
     background: 0;
     border: 0;
     cursor: pointer;
+
     display: flex;
     justify-content: center;
     position: absolute;
@@ -179,4 +180,4 @@
   }
   .carousel__dots .dot.active {
     background: black;
-  } */
+  }
