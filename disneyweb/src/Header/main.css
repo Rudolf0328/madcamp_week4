@@ -89,7 +89,8 @@
 .to-right-underline:after{
   content: "";
   position: absolute;
-  left: 0;
+  /* left: 30px; */
+  left: auto;
   bottom: -40px;
   width: 0px;
   height: 13px;

@@ -65,7 +65,7 @@ class Header extends Component {
       
         <Grid item xs>
         <div className = "big">
-          <div className="to-right-underline">
+          <div className="to-right-underline" style={{display:"flex", justifyContent:'center', alignItems:'center'}}>
             <Link to = "/home" style={{textDecoration: "none" }}>
                 <div color="black" fontSize='24px' id="normal-font-menu" align='center' variant="overline" sx={{ fontWeight: 700 }}>음악</div>
                 </Link>
@@ -74,7 +74,7 @@ class Header extends Component {
       </Grid>
       <Grid item xs>
       <div className = "big">
-      <div className="to-right-underline">
+      <div className="to-right-underline" style={{display:"flex", justifyContent:'center', alignItems:'center'}}>
               <div color="black" fontSize='24px' id="normal-font-menu" align='center' variant="overline" sx={{ fontWeight: 700 }}>미니게임</div>
               </div>
             </div>
@@ -82,7 +82,7 @@ class Header extends Component {
       
       <Grid item xs container alignItems='center'>
         <Grid item xs>
-          <div color="black" fontSize='18px' id="normal-font-menu" align='right' sx={{ fontWeight: 700 }}>공듀</div>
+          <div color="black" fontSize='18px' id="normal-font-menu" align='center' sx={{ fontWeight: 700, right: "10px" }}>공듀</div>
         </Grid>
         <Grid item xs>
           <img className="round-image"></img>

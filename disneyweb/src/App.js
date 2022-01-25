@@ -63,7 +63,6 @@ function App() {
       <Route path = "/please" element = {<MusicPage/>} />
 
       {/* <Route path = "/test2" element = {<Sec5/>} /> */}
-      <Route path = "/test3" element = {<Dance/>} />
       <Route path = "/characters" element = {<Character/>} />
       </Routes>
     {/* </div> */}
