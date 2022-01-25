@@ -177,11 +177,11 @@ function Sec5(){
     
         };
     
-        $(window).scroll(function(e){ //스크롤 이벤트를 추가합니다.
+        // $(window).scroll(function(e){ //스크롤 이벤트를 추가합니다.
     
-            moveSection(); // 스크롤 이동처리 함수입니다
+        //     moveSection(); // 스크롤 이동처리 함수입니다
     
-        });
+        // });
     
         init(); //start
     });
