@@ -14,6 +14,9 @@ import Dance from './Dance/dance'
 import Card from './Card/card'
 import Bingbing from './bingbing/bingbing';
 import Bingbing2 from './bingbing2/bingbing2';
+import Bingbing3 from './bingbing3/bingbing3';
+// import Bingbing4 from './bingbing4/bingbing4';
+
 
 
 function App() {
@@ -32,6 +35,11 @@ function App() {
        <Route path = "/card" element = {<Card/>} />
        <Route path = "/bingbing" element = {<Bingbing/>} />
        <Route path = "/bingbing2" element = {<Bingbing2/>} />
+       <Route path = "/bingbing3" element = {<Bingbing3/>} />
+       {/* <Route path = "/bingbing4" element = {<Bingbing4/>} /> */}
+
+
+
 
 
 
