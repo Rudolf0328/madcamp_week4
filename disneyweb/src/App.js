@@ -11,14 +11,14 @@ import Sec6 from './sec6/sec6';
 import Wheel from './MusicPage/Wheel';
 import Sec5 from './sec5/sec5';
 import Component from './sec6/sec6';
-import s1 from "../src/needledrop/Do You Want to Build a Snowman.mp3";
-import s2 from "../src/needledrop/Let It Go.mp3";
-import s3 from "../src/needledrop/Frozen Heart.mp3";
 // import Bingbing from './bingbing/bingbing';
 // import Bingbing2 from './bingbing2/bingbing2';
 import Bingbing3 from './bingbing3/bingbing3';
 // import Bingbing4 from './bingbing4/bingbing4';
 
+// import Card from './Card/card'
+// import Bingbing from './bingbing/bingbing';
+import Bingbing2 from './bingbing2/bingbing2';
 
 // import Carousel from './MusicPage/Carousel';
 import MusicPage from './MusicPage/MusicPage';
@@ -27,7 +27,7 @@ import Character from './CharacterPage/Character';
 // import Component from './sec6/sec6';
 
 function App() {
-  const [sound, setSound] = useState("");
+  const [sound, setSound] = useState();
   const [auto, setAuto] = useState(false);
   const [currentT, setCurrentT] = useState(0);
 
@@ -44,6 +44,7 @@ function App() {
       <Routes>
      <Route path = "/" element = {<MainPage/>} />
       <Route path = "/home" element = {<NeedleDrop sound = {sound} setSound = {setSound} auto = {auto} setAuto = {setAuto} currentT = {currentT} setCurrentT = {setCurrentT}/>}/>
+     {/* <Route path = "/" element = {<MainPage/>} /> */}
       <Route path = "/info" element = {<InfoPage/>} />
       <Route path = "/test" element = {<Sec6/>} /> 
        <Route path = "/music" element = {<Wheel/>} />
@@ -51,14 +52,10 @@ function App() {
        {/* <Route path = "/bingbing" element = {<Bingbing/>} /> */}
        {/* <Route path = "/bingbing2" element = {<Bingbing2/>} /> */}
        <Route path = "/bingbing3" element = {<Bingbing3/>} />
-
-
-
-
-
-      <Route path = "/test" element = {<Sec6/>} />
-
-      <Route path = "/music" element = {<Wheel/>} />
+      <Route path = "/test3" element = {<Dance/>} /> 
+       {/* <Route path = "/card" element = {<Card/>} /> */}
+       {/* <Route path = "/bingbing" element = {<Bingbing/>} /> */}
+       <Route path = "/bingbing2" element = {<Bingbing2/>} />
       {/* <Route path = "/carousel" element = {<Carousel/>} /> */}
       <Route path = "/please" element = {<MusicPage/>} />
 
