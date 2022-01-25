@@ -1,13 +1,13 @@
 .book {
   transition: opacity 0.4s 0.2s;
-  min-height: 100%;
+  min-height: 120%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2em 0;
   line-height: 1.5em;
   font-family: 'Lovers Quarrel', cursive;
-  background: #333;
+  /* background: #333; */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 p{
@@ -18,7 +18,7 @@ p{
 }
 .page {
   width: 30vw;
-  height: 44vw;
+  height: 30vw;
   background-color: #111111;
   float: left;
   margin-bottom: 0.5em;
@@ -33,11 +33,13 @@ p{
 }
 .book .pages {
   width: 60vw;
-  height: 44vw;
+  height: 40vw;
   position: relative;
   transform-style: preserve-3d;
   backface-visibility: hidden;
   border-radius: 4px;
+  size: 300px;
+  
   /*box-shadow: 0 0 0 1px #e3dfd8;*/
 }
 .book .page {

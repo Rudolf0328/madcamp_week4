@@ -12,8 +12,7 @@ let test = [
  function Bingbing2() {
     let cnt = 0;
     function turnP(){
-        // document.querySelector('.pageprev').classList.remove("opac");
-        // document.querySelector('.page').classList.remove("turnpage");
+        
         console.log(cnt);
         console.log(test[cnt]);
         // document.querySelector('.pageprev').style.animationPlayState = "running";
@@ -24,6 +23,8 @@ let test = [
         setTimeout(() => {
             cnt++;
             cnt++;
+            document.querySelector('.pageprev').classList.remove("opac");
+        document.querySelector('.page').classList.remove("turnpage");
             document.getElementById('turnBt').disabled = false;
         },2000);
         document.getElementById('page3').src = test[cnt+2];

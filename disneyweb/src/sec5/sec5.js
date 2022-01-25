@@ -2,18 +2,16 @@ import React, { Component } from "react";
 import './sec5style.css'
 import img_list02 from "./images/img_list02.jpg"
 import img_list01 from "./images/img_list01.jpg"
-import img_list03 from "./images/img_list03.jpg"
-import mson1 from "./images/mson1.jpg"
-import mson2 from "./images/mson2.jpg"
-import mson3 from "./images/mson3.jpg"
-import mson4 from "./images/mson4.jpg"
-import mson5 from "./images/mson5.jpg"
-import mson6 from "./images/mson6.jpg"
-import mson7 from "./images/mson7.jpg"
-import mson8 from "./images/mson8.jpg"
-import mson9 from "./images/mson9.jpg"
-// import $ from 'jquery';
-// import jquery from 'jquery';
+import dp10 from "./images/dp10.jpg"
+import dp1 from "./images/dp1.jpg"
+import dp2 from "./images/dp2.jpg"
+import dp3 from "./images/dp3.jpg"
+import dp4 from "./images/dp4.jpg"
+import dp5 from "./images/dp5.jpg"
+import dp6 from "./images/dp6.jpg"
+import dp7 from "./images/dp7.jpg"
+import dp8 from "./images/dp8.jpg"
+import dp9 from "./images/dp9.jpg"
 import $ from 'jquery';
 
 
@@ -179,11 +177,11 @@ function Sec5(){
     
         };
     
-        $(window).scroll(function(e){ //스크롤 이벤트를 추가합니다.
+        // $(window).scroll(function(e){ //스크롤 이벤트를 추가합니다.
     
-            moveSection(); // 스크롤 이동처리 함수입니다
+        //     moveSection(); // 스크롤 이동처리 함수입니다
     
-        });
+        // });
     
         init(); //start
     });
@@ -234,12 +232,12 @@ function Sec5(){
                             <img src={img_list02} ></img>
                         </figure>
                         <figure class="img_box last">
-                            <img src={img_list03}></img>
+                            <img src={dp10}></img>
                         </figure>
                     </li>
                     <li>
                         <figure class="img_box">
-                            <img src={img_list01}></img>
+                            <img src={dp9}></img>
                         </figure>
                     </li>
                 </ul>
@@ -254,28 +252,28 @@ function Sec5(){
             </p>
             <article class="list_banner inner">
                 <figure class="img_box img1">
-                    <img src={mson1}></img>
+                    <img src={dp1}></img>
                 </figure>
                 <figure class="img_box img2">
-                    <img src={mson2}></img>
+                    <img src={dp2}></img>
                 </figure>
                 <figure class="img_box img3">
-                    <img src={mson3}></img>
+                    <img src={dp3}></img>
                 </figure>
                 <figure class="img_box img4">
-                    <img src={mson4}></img>
+                    <img src={dp4}></img>
                 </figure>
                 <figure class="img_box img5">
-                    <img src={mson5}></img>
+                    <img src={dp5}></img>
                 </figure>
                 <figure class="img_box img6">
-                    <img src={mson6}></img>
+                    <img src={dp6}></img>
                 </figure>
                 <figure class="img_box img7">
-                    <img src={mson7}></img>
+                    <img src={dp7}></img>
                 </figure>
                 <figure class="img_box img8">
-                    <img src={mson8}></img>
+                    <img src={dp8}></img>
                 </figure>
                 <div class="bg_line"></div>
             </article>
