@@ -15,7 +15,6 @@ class InfoPage extends Component {
   render() {
     return (
       <div>
-        <Header></Header>
       <div className="container">
         <Grid container spacing={6} justify="flex-start">
           <Grid item xs={12} sm={6} md={4} lg={4}>
