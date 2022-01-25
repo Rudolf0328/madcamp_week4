@@ -53,7 +53,6 @@ function App() {
        {/* <Route path = "/bingbing" element = {<Bingbing/>} /> */}
        {/* <Route path = "/bingbing2" element = {<Bingbing2/>} /> */}
        <Route path = "/bingbing3" element = {<Bingbing3/>} />
-      <Route path = "/test3" element = {<Dance/>} /> 
        {/* <Route path = "/card" element = {<Card/>} /> */}
        {/* <Route path = "/bingbing" element = {<Bingbing/>} /> */}
        <Route path = "/bingbing2" element = {<Bingbing2/>} />
