@@ -23,6 +23,7 @@ import Bingbing3 from './bingbing3/bingbing3';
 // import Carousel from './MusicPage/Carousel';
 import MusicPage from './MusicPage/MusicPage';
 import CharacterPage from './CharacterPage/CharacterPage';
+import Character from './CharacterPage/Character';
 // import Component from './sec6/sec6';
 
 function App() {
@@ -62,11 +63,8 @@ function App() {
       <Route path = "/please" element = {<MusicPage/>} />
 
       {/* <Route path = "/test2" element = {<Sec5/>} /> */}
-
-      <Route path = "/characters" element = {<CharacterPage/>} />
-
-
-
+      <Route path = "/test3" element = {<Dance/>} />
+      <Route path = "/characters" element = {<Character/>} />
       </Routes>
     {/* </div> */}
     </Router>
