@@ -64,10 +64,10 @@
   z-index: 1;
 }
 
-.big :hover {
+/* .big :hover {
   transform: scale(1.1,1.1);
   font-weight: bold;
-}
+} */
 
 .big :hover .text{
   display:block;
