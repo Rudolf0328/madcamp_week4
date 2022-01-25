@@ -27,13 +27,14 @@ class InfoPage extends Component {
   render() {
     return (
       <div>
-        {/* <Header></Header> */}
+        <Header></Header>
       <div className="container">
         <Grid container spacing={6} justify="flex-start">
           <Grid item xs={12} sm={6} md={4} lg={4} className="upper-grid">
             <div>
             &nbsp;
             </div >
+            <Link to="/player">
             <div className="individual" >
             <div className= "color" >
             
@@ -49,6 +50,9 @@ class InfoPage extends Component {
             
             </div>
             </div>
+            </Link>
+            
+            
             
             </Grid>
             

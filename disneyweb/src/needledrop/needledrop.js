@@ -1,14 +1,10 @@
 // import { useState, useEffect, useRef } from "react";
 // import {Link, BrowserRouter as Router} from 'react-router-dom';
-// import "./needledrop.css"
+import "./needledrop.css"
 import lp from './lp.png'
 import arm from './arm.png'
-<<<<<<< HEAD
-// import circle from './circle.png'
-// import FirstEstab from "../MainPage/FirstEstab";
-=======
 import circle from './circle.png'
->>>>>>> b7a8c73ae0c7f1128017e113a5dfc8f0f050a7f1
+import Header from "../Header/main";
 
 
 let toggle = "stop";
@@ -20,7 +16,7 @@ const NeedleDrop =(props)=>{
     var i = 0;
     for(i=0;i<title.length;i++){
         var str = "./"+title[i]+".mp3";
-        songs[i] = new Audio(str)
+        if(songs[i] == null) songs[i] = new Audio(str)
         songs[i].preload = "auto";
     }
     const sound = props.sound;
@@ -127,7 +123,10 @@ const NeedleDrop =(props)=>{
         setAuto(true);
     }
     return(
+      <div>
+      <Header/>
         <div className="player">
+          
         <img src = "./frozen.png" className="cover" alt=""></img>
         <img src = {lp} className="lppan"alt=""></img>
         <div className="songs">
@@ -140,6 +139,7 @@ const NeedleDrop =(props)=>{
             }
         </div>
         <img src = {arm} className="arm" alt="" onLoad = {playing} onClick={move}></img>
+        </div>
         </div>
     );
 };

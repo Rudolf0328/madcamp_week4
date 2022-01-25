@@ -42,6 +42,7 @@ import $ from 'jquery';
 
 // import video_1 from "./sky.mp4"
 import video_1 from "./disney.mp4"
+import { Link } from "react-router-dom";
 
 
 function Sec5(){
@@ -209,7 +210,7 @@ function Sec5(){
     
     
     return (
-
+      <Link to="/animation">
         <div class="wrap">
         <header class="header_wrap">
             <div class="logo">Disney Wiki</div>
@@ -307,6 +308,7 @@ function Sec5(){
             </div>
         </footer>
     </div>
+    </Link>
 
     )
     }

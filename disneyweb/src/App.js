@@ -18,6 +18,9 @@ import "./header.css";
 
 
 import MiniPlayer from './miniPlayer/miniPlayer';
+import Character from './CharacterPage/Character';
+import CharacterPage from './CharacterPage/CharacterPage';
+
 let song;
 let songs = [];
 function App() {
@@ -25,7 +28,7 @@ function App() {
   const title = ["Frozen Heart","Do You Want to Build a Snowman", "For the First Time in Forever","Love Is an Open Door","Let It Go", "Reindeers Are Better Than People", "In Summer","For the First Time in Forever Reprise", "Fixer Upper"];
   for(i=0;i<title.length;i++){
     var str = "./"+title[i]+".mp3";
-    songs[i] = new Audio(str)
+    if(songs[i] == null) songs[i] = new Audio(str)
     songs[i].preload = "auto";
 }
   const [sound, setSound] = useState(songs[0]);
@@ -68,11 +71,13 @@ function nextsong(){
     {/* <audio id = 'bgm' src = {sound} autoPlay = {auto}/> */}
     <Router>
     <div className="App">
-    <Header/>
+    {/* <Header/> */}
       <Routes>
      <Route path = "/" element = {<Sec5/>} />
       <Route path = "/player" element = {<NeedleDrop songs = {songs} curTitle = {curTitle} setCurTitle = {setCurTitle} title = {title} sound = {sound} setSound = {setSound} auto = {auto} setAuto = {setAuto} currentT = {currentT} setCurrentT = {setCurrentT} totalT = {totalT} setTotalT = {setTotalT}/>}/>
-      <Route path = "/animation" element = {<InfoPage/>} />
+      <Route path = "/animation" element = {<AnimationPage/>} />
+      <Route path = "/music" element = {<InfoPage/>} />
+      <Route path = "/characters" element = {<CharacterPage/>} />
        {/* <Route path = "/music" element = {<Bingbing/>} /> */}
       {/* <Route path = "/characters" element = {<Character/>} /> */}
       </Routes>
