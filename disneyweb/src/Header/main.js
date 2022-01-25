@@ -2,8 +2,9 @@ import { Box } from "@mui/system";
 import { Component } from "react";
 import './main.css';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
-import { Grid, Link, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
+import {Link} from "react-router-dom";
 // import { Tooltip, tooltipClasses } from "@material-ui/core";
 import Zoom from '@mui/material/Zoom';
 
@@ -43,7 +44,7 @@ class Header extends Component {
       backgroundColor: 'white',
     }} className="header">
       <Grid item xs alignItems="flex-start">
-          <Link to="/home">
+          <Link to="/">
             <img src="./diswiki.png" align='left' width='241px' height='88.86px'></img>
           </Link>
       </Grid>
@@ -51,34 +52,37 @@ class Header extends Component {
         {/* <ThemeProvider theme={theme}>
           <CustomWidthTooltip> */}
             <div className = "big">
-              <div className="to-right-underline">
-                <a  href="file:///C:/Users/kevin/Desktop/20220113_ggang_lesson/20220113_ggang_lesson/ggang_lesson/section6/step1/complete.html">
-                <div color="black" fontSize='24px' align='center' variant="overline" sx={{ fontWeight: 700 }}>작품</div>
-                </a>
+              <div className="to-right-underline" style={{display:"flex", justifyContent:'center', alignItems:'center'}}>
+                <Link to="./info" style={{ textDecoration: 'none' }}>
+                <div color="black" fontSize='24px' id="normal-font-menu" align='center' variant="overline" sx={{ fontWeight: 700 }}>작품</div>
+                </Link>
               
               </div>
             </div>
           {/* </CustomWidthTooltip>
         </ThemeProvider> */}
       </Grid>
-      <Grid item xs>
-      <div className = "big">
-      <div className="to-right-underline">
-              <div color="black" fontSize='24px' align='center' variant="overline" sx={{ fontWeight: 700 }}>음악</div>
+      
+        <Grid item xs>
+        <div className = "big">
+          <div className="to-right-underline" style={{display:"flex", justifyContent:'center', alignItems:'center'}}>
+            <Link to = "/home" style={{textDecoration: "none" }}>
+                <div color="black" fontSize='24px' id="normal-font-menu" align='center' variant="overline" sx={{ fontWeight: 700 }}>음악</div>
+                </Link>
+                </div>
               </div>
-            </div>
       </Grid>
       <Grid item xs>
       <div className = "big">
-      <div className="to-right-underline">
-              <div color="black" fontSize='24px' align='center' variant="overline" sx={{ fontWeight: 700 }}>미니게임</div>
+      <div className="to-right-underline" style={{display:"flex", justifyContent:'center', alignItems:'center'}}>
+              <div color="black" fontSize='24px' id="normal-font-menu" align='center' variant="overline" sx={{ fontWeight: 700 }}>미니게임</div>
               </div>
             </div>
       </Grid>
       
       <Grid item xs container alignItems='center'>
         <Grid item xs>
-          <Typography color="black" fontSize='18px' align='right' sx={{ fontWeight: 700 }}>공듀</Typography>
+          <div color="black" fontSize='18px' id="normal-font-menu" align='center' sx={{ fontWeight: 700, right: "10px" }}>공듀</div>
         </Grid>
         <Grid item xs>
           <img className="round-image"></img>

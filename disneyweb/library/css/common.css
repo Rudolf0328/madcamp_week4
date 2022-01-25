@@ -44,9 +44,9 @@ url(../fonts/NotoSans-Light.woff2) format('woff2'),
 url(../fonts/NotoSans-Light.woff) format('woff'),
 url(../fonts/NotoSans-Light.otf) format('opentype');}
 
-@font-face {font-family: 'Roboto';
+/* @font-face {font-family: 'Roboto';
 src:url(../fonts/Roboto-Bold.woff) format('woff');
-}
+} */
 
 /* reset */
 
