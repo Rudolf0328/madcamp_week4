@@ -2,13 +2,13 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    overflow-y: calc();
+    padding-top : 157px
 }
 .lppan{
     align-content: center;
     max-width: 600px;
     position:absolute;
-    margin-top: -300px;
+    margin-top: -140px;
     margin-left: 400px;
     shape-outside: circle(100px);
     filter: drop-shadow(4px 4px 4px);
@@ -17,7 +17,7 @@
     align-content: center;
     max-width: 202px;
     position:absolute;
-    margin-top: -100px;
+    margin-top: 60px;
     margin-left: 600px;
     clip-path: circle(100px);
 }
@@ -27,7 +27,7 @@
 .arm{
     position:absolute;
     margin-top: 400px;
-    margin-left: 300px;
+    margin-left: 250px;
     max-width: 420px;
     transform: rotate(-90deg);
     transform-origin: 4% 83%;
@@ -38,9 +38,8 @@
 }
 .songs{
   position:absolute;
-  writing-mode: vertical-rl;
-  margin-top: 300px;
-  margin-left: 400px;
+  margin-top: 0px;
+  margin-left: 1050px;
   height: 300px;
   width: 300px;
   font-weight: normal;

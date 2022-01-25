@@ -1,36 +1,17 @@
 import React, { Component } from "react";
 import './sec5style.css'
-// import img_list02 from "./images/img_list02.jpg"
-// import img_list01 from "./images/img_list01.jpg"
-// import img_list03 from "./images/img_list03.jpg"
-// import mson1 from "../../images/images/mson1.jpg"
-// import mson2 from "../../images/images/mson2.jpg"
-// import mson3 from "../../images/images/mson3.jpg"
-// import mson4 from "../../images/images/mson4.jpg"
-// import mson5 from "../../images/images/mson5.jpg"
-// import mson6 from "../../images/images/mson6.jpg"
-// import mson7 from "../../images/images/mson7.jpg"
-// import mson8 from "../../images/images/mson8.jpg"
-// import mson9 from "./images/mson9.jpg"
-
-// import dp1 from "./images/images/dp1.jpg"
-// import dp2 from "./images/images/dp2.jpg"
-// import dp3 from "./images/images/dp3.jpg"
-// import dp4 from "./images/images/dp4.jpg"
-// import dp5 from "./images/images/dp5.jpg"
-// import dp6 from "./images/images/dp6.jpg"
-// import dp7 from "./images/images/dp7.jpg"
-// import dp8 from "./images/images/dp8.jpg"
-// import dp9 from "./images/images/dp9.jpg"
-// import dp10 from "./images/images/dp10.jpg"
-// import dp11 from "./images/images/dp11.jpg"
-// import dp12 from "./images/images/dp12.jpg"
-// import dp13 from "./images/images/dp13.jpg"
-// import dp14 from "./images/images/dp14.jpg"
-// import dp15 from "./images/images/dp15.jpg"
-// import dp16 from "./images/images/dp16.jpg"
-// import dp17 from "./images/images/dp17.jpg"
-
+import img_list02 from "./images/img_list02.jpg"
+import img_list01 from "./images/img_list01.jpg"
+import img_list03 from "./images/img_list03.jpg"
+import mson1 from "./images/mson1.jpg"
+import mson2 from "./images/mson2.jpg"
+import mson3 from "./images/mson3.jpg"
+import mson4 from "./images/mson4.jpg"
+import mson5 from "./images/mson5.jpg"
+import mson6 from "./images/mson6.jpg"
+import mson7 from "./images/mson7.jpg"
+import mson8 from "./images/mson8.jpg"
+import mson9 from "./images/mson9.jpg"
 // import $ from 'jquery';
 // import jquery from 'jquery';
 import $ from 'jquery';
@@ -250,15 +231,15 @@ function Sec5(){
                 <ul class="list">
                     <li>
                         <figure class="img_box">
-                            <img src="./images/images/dp18.jpg"width="500px" height="312.5px" ></img>
+                            <img src="./dp16" ></img>
                         </figure>
                         <figure class="img_box last">
-                            <img src="./images/images/dp20.jpg" width="500px" height="312.5px"></img>
+                            <img src={img_list03}></img>
                         </figure>
                     </li>
                     <li>
                         <figure class="img_box">
-                            <img src="./images/images/dp25.jpg" width="600px" height="625px"></img>
+                            <img src={img_list01}></img>
                         </figure>
                     </li>
                 </ul>
@@ -273,28 +254,28 @@ function Sec5(){
             </p>
             <article class="list_banner inner">
                 <figure class="img_box img1">
-                    <img src="./images/images/dp11.jpg"></img>
+                    <img src={mson1}></img>
                 </figure>
                 <figure class="img_box img2">
-                    <img src="./images/images/dp17.jpg"></img>
+                    <img src={mson2}></img>
                 </figure>
                 <figure class="img_box img3">
-                    <img src="./images/images/dp12.jpg"></img>
+                    <img src={mson3}></img>
                 </figure>
                 <figure class="img_box img4">
-                    <img src="./images/images/dp10.jpg"></img>
+                    <img src={mson4}></img>
                 </figure>
                 <figure class="img_box img5">
-                    <img src="./images/mson5.jpg"></img>
+                    <img src={mson5}></img>
                 </figure>
                 <figure class="img_box img6">
-                    <img src="./images/images/dp15.jpg"></img>
+                    <img src={mson6}></img>
                 </figure>
                 <figure class="img_box img7">
-                    <img src="./images/images/dp16.jpg"></img>
+                    <img src={mson7}></img>
                 </figure>
                 <figure class="img_box img8">
-                    <img src="./images/images/dp9.jpg"></img>
+                    <img src={mson8}></img>
                 </figure>
                 <div class="bg_line"></div>
             </article>
