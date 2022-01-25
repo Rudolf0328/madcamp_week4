@@ -2,23 +2,21 @@ import { useState, useEffect, useRef } from "react";
 import {Link, BrowserRouter as Router} from 'react-router-dom';
 import "./needledrop.css"
 import lp from './lp.png'
-import frozen from './frozen.png'
 import arm from './arm.png'
 import circle from './circle.png'
-import FirstEstab from "../MainPage/FirstEstab";
 
 
 let toggle = "stop";
 let song;
 let songs = [];
 const NeedleDrop =(props)=>{
-    var title= new Array();
+    var title = new Array();
+    title = props.title;
     var i = 0;
-    title = ["Frozen Heart","Do You Want to Build a Snowman", "For the First Time in Forever","Love Is an Open Door","Let It Go", "Reindeers Are Better Than People", "In Summer","For the First Time in Forever Reprise", "Fixer Upper"];
-    
     for(i=0;i<title.length;i++){
         var str = "./"+title[i]+".mp3";
         songs[i] = new Audio(str)
+        songs[i].preload = "auto";
     }
     const sound = props.sound;
     const setSound = props.setSound;
@@ -26,7 +24,11 @@ const NeedleDrop =(props)=>{
     const setAuto = props.setAuto;
     const currentT = props.currentT;
     const setCurrentT = props.setCurrentT;
-
+    const curTitle = props.curTitle;
+    const setCurTitle = props.setCurTitle;
+    const totalT = props.totalT;
+    const setTotalT = props.setTotalT;
+    // const songs = props.songs;
     function playing(){
         console.log("playing");
         console.log(sound);
@@ -60,17 +62,21 @@ const NeedleDrop =(props)=>{
                 song = sound;
             }
             else song = songs[0];
-            song.currentTime = currentT;
             for(i = 0; i<songs.length;i++)
                 {
                     if(songs[i].src==song.src) {
                         console.log("same");
+                        setCurTitle(i);
                         document.getElementById(i).style.fontWeight = "bold";
                     }
                 }
             song.play();
             setAuto(true);
             setSound(song);
+            setCurrentT(song.currentTime);
+            setTotalT(song.duration);
+            console.log(song.duration);
+            
             // var temp = sound.toString().substr(-1);
             // console.log(temp);
             // document.getElementById(temp).style.fontWeight = "bold";
@@ -86,6 +92,7 @@ const NeedleDrop =(props)=>{
             setCurrentT(song.currentTime);
             console.log(song.currentTime);
             setSound(song);
+            setTotalT(song.duration);
             setAuto(false);
             // var temp = sound.toString().substr(-1);
             // document.getElementById(temp).style.fontWeight = "normal";
@@ -100,20 +107,30 @@ const NeedleDrop =(props)=>{
         document.querySelector(".lppan").classList.add("lpspin");
         document.querySelector(".cover").classList.add("lpspin");
         toggle = "start";
-        if(song != null )song.pause();
+        if(song != null ){
+            song.pause();
+            // song.remove();
+            // song.srcObject = null;
+        }
         song = songs[e.target.id]
         song.play();
         setSound(song);
+        setCurTitle(e.target.id);
+        console.log(song.currentTime);
+        setCurrentT(song.currentTime);
+        setTotalT(song.duration);
         setAuto(true);
     }
     return(
         <div className="player">
-        <img src = {frozen} className="cover" alt=""></img>
+        <img src = "./frozen.png" className="cover" alt=""></img>
         <img src = {lp} className="lppan"alt=""></img>
         <div className="songs">
             {
                 title.map((element, index) => (
-                    <div id = {index} onClick={djdropthebeat}>{index}. {element}<br/></div>
+                    <div id = {index} onClick={djdropthebeat}>{index+1}. {element}<p/>
+                    <br/>
+                    </div>
                 ))
             }
         </div>
