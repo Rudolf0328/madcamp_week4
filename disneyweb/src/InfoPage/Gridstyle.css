@@ -1,3 +1,7 @@
+.upper-grid{
+  z-index:3;
+}
+
 body {
     background: #fff;
   }
@@ -29,6 +33,8 @@ body {
   .individual{
     display: flex;
     justify-content: space-evenly;
+    z-index: 2;
+   
   }
   .paper{
     width: 324px;
@@ -50,21 +56,24 @@ body {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  margin-top: 10%;
+  margin-top: -2%;
   margin-left: 10%;
   /* background-color: rgb(240, 0, 0) */
-  
 }
 
 .rectangle
 {
-  width: 324px;
-  height : 439px;
+  width: 300px;
+  height : 300px;
   justify-content: space-evenly;
-  /* border-color: black; */
+  border-color: black;
+  background-color: white;
   box-shadow: 11px 8px 14px #66666675;
-  border-radius: 5%;
   position: relative;
+  z-index: 1;
+
+ 
+  
 }
 /* .paper :hover{
   color: gray;
@@ -84,24 +93,59 @@ body {
   
 }
 
+.lpsize{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  margin-top: -300px;
+  margin-left: 40px;
+  position: relative;
+  /* visibility: hidden; */
+  z-index: -1;
+  
+}
+
 .color{
   z-index: 1;
-  border-radius: 5%;
+ 
 }
 
 .color:hover{
-  transform: scale(1.1,1.1);
-  background-color: gray;
-  filter: brightness(50%);
+  /* transform: scale(1.1,1.1); */
+  /* background-color: gray; */
+  /* filter: brightness(50%); */
   transition: all ease 1s 0s;
 
 
 }
 
-.color:hover .text{
+.color:hover .lpsize{
   visibility: visible;
   transition: 1s;
+  transform: translateX(150px);
+}
 
+.color:active {
+  
+   transform: rotateY(90deg); 
+   /* transform: scale(1.1,1.1); */
+   animation : rotate_image 1s infinite linear;
+
+  
+}
+
+.color.active .lpsize{
+  display: none;
+
+}
+
+@keyframes rotate_image {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(359deg);
+  }
 }
 
 .text_movie{

@@ -1,11 +1,11 @@
-import { useState, useEffect, useRef } from "react";
-import {Link, BrowserRouter as Router} from 'react-router-dom';
-import "./needledrop.css"
+// import { useState, useEffect, useRef } from "react";
+// import {Link, BrowserRouter as Router} from 'react-router-dom';
+// import "./needledrop.css"
 import lp from './lp.png'
 import frozen from './frozen.png'
 import arm from './arm.png'
-import circle from './circle.png'
-import FirstEstab from "../MainPage/FirstEstab";
+// import circle from './circle.png'
+// import FirstEstab from "../MainPage/FirstEstab";
 
 
 let toggle = "stop";
