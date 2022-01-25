@@ -8,6 +8,7 @@ let dummy = {
 };
 
 let Character = (props) => {
+  console.log(props)
   let {name, sex, image} = props.props;
   let test = dummy;
 

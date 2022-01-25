@@ -9,53 +9,64 @@ import { CardContent, CardMedia, Typography } from "@mui/material";
 let movies = [
   {
     title: "겨울왕국1",
-    src: "./frozen1.jpeg",
-    logo: "./frozen1_logo.png"
+    src: "./frozen_one.jpeg",
+    logo: "./frozen1_logo.png",
+    color: "#CCE5FF"
   }, 
   {
     title: "겨울왕국2",
     src: "./frozen2.jpeg",
-    logo: "./frozen2_logo.png"
+    logo: "./frozen2_logo.png",
+    color: "#6666FF"
    },
    {
      title: "라푼젤",
      src: "./tangled.jpeg",
-     logo: "./tangled_logo.png"
+     logo: "./tangled_logo.png",
+     color: "#FFCCFF"
    }, 
    {
      title: "알라딘",
      src: "./aladin.jpeg",
-     logo: "./aladin_logo.png"
+     logo: "./aladin_logo.png",
+     color: "#B266FF"
    }, 
    {
       title: "뮬란",
       src: "./mulan.jpeg",
-      logo: "./mulan_logo.png"
+      logo: "./mulan_logo.png",
+      color: "#990000"
+
    },
-  //  {
-  //    title: "인어공주",
-  //    src: "./ariel.jpeg"
-  //  }, 
-  //  {
-  //    title: "미녀와 야수",
-  //    src: "./beautyandthebeast.jpg"
-  //  }, 
-  //  {
-  //    title: "신데렐라",
-  //    src: "./cinderella.jpeg"
-  //  }, 
-  //  {
-  //    title: "모아나",
-  //    src: "./moana.jpg"
-  //  }, 
+   {
+     title: "인어공주",
+     src: "./ariel.jpeg",
+     color: "#FF6666"
+   }, 
+   {
+     title: "미녀와 야수",
+     src: "./beautyandthebeast.jpg",
+     color: "#FFE91A"
+   }, 
+   {
+     title: "신데렐라",
+     src: "./cinderella.jpeg",
+     color: "#FFFBDB"
+   }, 
+   {
+     title: "모아나",
+     src: "./moana.jpg",
+     color: "#00CC00"
+   }, 
   //  {
   //    title: "포카혼타스",
   //    src: "./pochahontas.jpg"
   //   }, 
-  //   { 
-  //     title: "백설공주",
-  //     src: "./whitesnow.jpg"
-  //   }
+    { 
+      title: "백설공주",
+      src: "./whitesnow.jpg",
+      color: "#FF0000"
+    }
 ]
 
 
@@ -71,13 +82,74 @@ class InfoPage extends Component {
     let { movies } = this.state;
     console.log(movies)
     return (
-      <div className="background-setting">
-        {
+      <Grid container className="whole-background">
+        <Grid item xs container flex-direction="row" className="upper-background">
+          <Grid item xs>
+            <div className="snow-white-top"></div>
+          </Grid>
+          <Grid item xs>
+            <div className="cinderella-top"></div>
+          </Grid>
+          <Grid item xs>
+            <div className="frozen-two-top"></div>
+          </Grid>
+          <Grid item xs>
+            <div className="mulan-top"></div>
+          </Grid>
+          <Grid item xs>
+            <div className="aladin-top"></div>
+          </Grid>
+          <Grid item xs>
+            <div className="frozen-one-top"></div>
+          </Grid>
+          <Grid item xs>
+            <div className="little-mermaid-top"></div>
+          </Grid>
+          <Grid item xs>
+            <div className="moana-top"></div>
+          </Grid>
+          <Grid item xs>
+            <div className="tangled-top"></div>
+          </Grid>
+        </Grid>
+      <Grid item xs container width="100%" display="flex" flex-direction="row" className="background-setting">
+        <Grid item xs>
+          <div className="snow-white"></div>
+        </Grid>
+        <Grid item xs>
+          <div className="cinderella"></div>
+        </Grid>
+        <Grid item xs>
+          <div className="frozen-two"></div>
+        </Grid>
+        <Grid item xs>
+          <div className="mulan"></div>
+        </Grid>
+        <Grid item xs>
+          <div className="aladin"></div>
+        </Grid>
+        <Grid item xs>
+          <div className="frozen-one"></div>
+        </Grid>
+        <Grid item xs>
+          <div className="little-mermaid"></div>
+        </Grid>
+        <Grid item xs>
+          <div className="moana"></div>
+        </Grid>
+        <Grid item xs>
+          <div className="tangled"></div>
+        </Grid>
+      </Grid>
+      
+        {/* {
           movies.map((element, index) => (
             <div>
-              <Box>
-                <img src={element.logo} alt={element.title} className="image-setting"></img>  
-              </Box>
+              <div sx={{ color: {element.color}}}>
+                {/* <img src={element.src} alt={element.title} className="image-setting-left"></img>   */}
+              {/* </div> */}
+              
+              
               {/* <CardMedia
                 component="img"
                 height="140"
@@ -89,10 +161,10 @@ class InfoPage extends Component {
                   {element.title}
                 </Typography>
               </CardContent> */}
-            </div>
-          ))
-        }
-      </div>
+            {/* </div> */}
+          {/* ))
+        } */}
+      </Grid>
       // <div>
       //   {/* <Header></Header> */}
       // <div>

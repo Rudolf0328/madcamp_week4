@@ -10,6 +10,7 @@ import Sec5 from './sec5/sec5';
 import Bingbing from './bingbing/bingbing';
 import Character from './CharacterPage/Character';
 import InfoPage from './InfoPage/main'
+import AnimationPage from './AnimationPage/AnimationPage';
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
       <Routes>
      <Route path = "/" element = {<Sec5/>} />
       <Route path = "/player" element = {<NeedleDrop sound = {sound} setSound = {setSound} auto = {auto} setAuto = {setAuto} currentT = {currentT} setCurrentT = {setCurrentT}/>}/>
-      <Route path = "/animation" element = {<InfoPage/>} />
+      <Route path = "/animation" element = {<AnimationPage/>} />
        <Route path = "/music" element = {<Bingbing/>} />
       <Route path = "/characters" element = {<Character/>} />
       </Routes>
