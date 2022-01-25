@@ -12,6 +12,8 @@ import Character from './CharacterPage/Character';
 import InfoPage from './InfoPage/main'
 import AnimationPage from './AnimationPage/AnimationPage';
 
+import "./header.css";
+
 
 function App() {
   const [sound, setSound] = useState();
@@ -27,7 +29,9 @@ function App() {
     <audio id = 'bgm' src = {sound} autoPlay = {auto} currenttime = {currentT}/>
     <Router>
     {/* <div className="App"> */}
-    <Header/>
+    {/* <Header/> */}
+    {/* <img src="./diswiki.png" className="logo-setting"></img>
+    <div className="tab-setting">music</div> */}
       <Routes>
      <Route path = "/" element = {<Sec5/>} />
       <Route path = "/player" element = {<NeedleDrop sound = {sound} setSound = {setSound} auto = {auto} setAuto = {setAuto} currentT = {currentT} setCurrentT = {setCurrentT}/>}/>

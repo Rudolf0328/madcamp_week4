@@ -2,6 +2,7 @@ import { Component } from "react";
 import "./animation.css"
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import Header from "../Header/main";
 
 const itemData = [
   {
@@ -50,6 +51,8 @@ class AnimationPage extends Component {
   render() {
     return(
     <div className="animation-page-background">
+      <Header/>
+      <div className="cards-setting">
       <ImageList sx={{ width: "100%" }} cols={6}>
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
@@ -63,6 +66,7 @@ class AnimationPage extends Component {
           </ImageListItem>
         ))}
       </ImageList>
+      </div>
     </div>
   )
   }

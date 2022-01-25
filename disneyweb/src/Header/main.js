@@ -34,7 +34,7 @@ import Zoom from '@mui/material/Zoom';
 // TODO: 타이포그래피 버튼으로 변경
 // TODO: 탭 누르면 선이랑 글씨 볼드 유지되게
 
-class Header extends Component {
+class BeforeHeader extends Component {
   render() {
     return<Grid container alignItems="center" className="menu" name="hover-feedback" justifyContent='space-evenly' flexDirection='row' spacing={2} sx={{
       // width: '100%',
@@ -89,6 +89,28 @@ class Header extends Component {
         </Grid>
       </Grid>
     </Grid>
+  }
+}
+
+class Header extends Component {
+  render() {
+  return (
+  <Grid continer className="header-design">
+    <Grid item xs alignItems="flex-start" align="center">
+      <Link to="/animation">
+        <img src="./camera.png" className="icon-design"></img>
+      </Link>
+    </Grid>
+    <Grid item xs align="center">
+      <img src="./diswiki.png" className="logo-design"></img>
+    </Grid>
+    <Grid item xs align="center">
+      <Link to="/music">
+        <img src="./music-notes.png" className="icon-design"></img>
+      </Link>
+    </Grid>
+  </Grid>
+  )
   }
 }
 

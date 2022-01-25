@@ -1,5 +1,4 @@
 .animation-page-background {
-  margin-top: 5vh;
   overflow: auto;
   height: 100vh;
   background-image: url("./wall2.jpg");
@@ -56,4 +55,10 @@
 }
 .container-poster > img {
   width: 250px;
+}
+
+.cards-setting {
+  margin-top: 3vh;
+  margin-left: 3vh;
+  margin-right: 3vh;
 }
