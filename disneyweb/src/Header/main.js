@@ -1,7 +1,6 @@
 import { Box } from "@mui/system";
 import { Component } from "react";
 import './main.css';
-<<<<<<< HEAD
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import { Grid, Typography } from "@mui/material";
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
@@ -34,10 +33,6 @@ import Zoom from '@mui/material/Zoom';
 // TODO: 글씨 크기 조절
 // TODO: 타이포그래피 버튼으로 변경
 // TODO: 탭 누르면 선이랑 글씨 볼드 유지되게
-=======
-import { Grid, Typography } from "@mui/material";
-import { Link } from "react-router-dom"
->>>>>>> wk
 
 class Header extends Component {
   render() {
@@ -57,9 +52,9 @@ class Header extends Component {
         {/* <ThemeProvider theme={theme}>
           <CustomWidthTooltip> */}
             <div className = "big">
-              <div className="to-right-underline">
+              <div className="to-right-underline" style={{display:"flex", justifyContent:'center', alignItems:'center'}}>
                 <Link to="./info" style={{ textDecoration: 'none' }}>
-                <div color="black" fontSize='24px' align='center' variant="overline" sx={{ fontWeight: 700 }}>작품</div>
+                <div color="black" fontSize='24px' id="normal-font-menu" align='center' variant="overline" sx={{ fontWeight: 700 }}>작품</div>
                 </Link>
               
               </div>
@@ -67,27 +62,27 @@ class Header extends Component {
           {/* </CustomWidthTooltip>
         </ThemeProvider> */}
       </Grid>
-      <Link to = "/home" style={{textDecoration: "none"}}>
+      
         <Grid item xs>
         <div className = "big">
-        <div className="to-right-underline">
-                <div color="black" fontSize='24px' align='center' variant="overline" sx={{ fontWeight: 700 }}>음악</div>
-                
+          <div className="to-right-underline">
+            <Link to = "/home" style={{textDecoration: "none" }}>
+                <div color="black" fontSize='24px' id="normal-font-menu" align='center' variant="overline" sx={{ fontWeight: 700 }}>음악</div>
+                </Link>
                 </div>
               </div>
       </Grid>
-      </Link>
       <Grid item xs>
       <div className = "big">
       <div className="to-right-underline">
-              <div color="black" fontSize='24px' align='center' variant="overline" sx={{ fontWeight: 700 }}>미니게임</div>
+              <div color="black" fontSize='24px' id="normal-font-menu" align='center' variant="overline" sx={{ fontWeight: 700 }}>미니게임</div>
               </div>
             </div>
       </Grid>
       
       <Grid item xs container alignItems='center'>
         <Grid item xs>
-          <Typography color="black" fontSize='18px' align='right' sx={{ fontWeight: 700 }}>공듀</Typography>
+          <div color="black" fontSize='18px' id="normal-font-menu" align='right' sx={{ fontWeight: 700 }}>공듀</div>
         </Grid>
         <Grid item xs>
           <img className="round-image"></img>
