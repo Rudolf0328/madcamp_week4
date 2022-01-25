@@ -44,51 +44,48 @@ function Bingbing3() {
 
 
     return(
-     <div>
-         <link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel" rel="stylesheet"></link>
+     
+         
 <div className="book">
   <div id="pages" className="pages">
-    <div className="page">
-    <img src = {disney_group2}></img>
-    </div>
-    <div className="page">
-    <img src = {disney_group}></img>
-    </div>
+    <div className="page"><p>LP record!</p></div>
+    <div className="page"></div>
     <div className="page"><p>Hello there!</p></div>
     <div className="page"></div>
     <div className="page"></div>
-    <div className="page">
-        
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+    <div className="page"></div>
+
+    <div classname="page">
+       
     </div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
-    <div className="page"></div>
+    
   </div>
 </div>
-</div>  
 
     )
 
