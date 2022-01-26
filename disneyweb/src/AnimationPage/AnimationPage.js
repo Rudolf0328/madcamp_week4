@@ -3,6 +3,7 @@ import "./animation.css"
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Header from "../Header/main";
+import { Grid } from "@mui/material";
 
 const itemData = [
   {
@@ -53,19 +54,24 @@ class AnimationPage extends Component {
     <div className="animation-page-background">
       <Header/>
       <div className="cards-setting">
-      <ImageList sx={{ width: "100%" }} cols={6}>
+      <Grid container sx={{ width: "100%" }}>
         {itemData.map((item) => (
-          <ImageListItem key={item.img}>
-            <div className="poster">
+          <Grid item xs key={item.img} className="card-card">
+            <div className="poster front-card">
               <img
+                position="absolute"
+                // className="front-card"
                 src={`${item.img}?w=164&fit=crop&auto=format`}
-                srcSet={`${item.img}?w=164&fit=crop&auto=format&dpr=2 2x`}
+                // srcSet={`${item.img}?w=164&fit=crop&auto=format&dpr=2 2x`}
                 alt={item.title}
-                loading="lazy"/>
+                loading="lazy">
+                  
+                </img>
+                <div position="absolute">안녕하세요 안녕 안녕 안녕 안녕하세요 아아아아아아아아</div>
             </div>
-          </ImageListItem>
+          </Grid>
         ))}
-      </ImageList>
+      </Grid>
       </div>
     </div>
   )

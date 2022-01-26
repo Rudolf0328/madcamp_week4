@@ -1,22 +1,27 @@
 .animation-page-background {
   overflow: auto;
   height: 100vh;
+  /* width: 100vh; */
   background-image: url("./wall2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .poster {
-  width: 250px;
+  width: 240px;
+  height: 330px;
   padding: 7%;
   position: relative;
   box-sizing: border-box;
   background-color: #fff;
   box-shadow: 0 3px 12px rgba(0,0,0,0.2);
   filter: saturate(85%) contrast(85%);
+  z-index: 3;
+  transform: rotateY(0);
 }
 .poster img {
   width: 200px;
+  height: 290px;
   display: block;
   z-index: 1;
 }
@@ -44,6 +49,91 @@
   background-size: 50% 100%, 100% 33.3333%, 100% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%;
   background-position: right top, left center, left bottom, left top, left top, right top, left center, right center, right center, left bottom; */
 }
+.poster:hover {
+  animation: card-flip 1s linear;
+  animation-fill-mode: forwards;
+  transform: rotateY(180deg);
+  color: white;
+  opacity: 1;
+  /* background-color: black; */
+}
+
+.poster div {
+  /* opacity: 0; */
+  /* color: white; */
+  text-align: center;
+}
+
+/* .poster img:hover {
+  background-color: black;
+} */
+
+/* .card-card:hover.back-card {
+  animation: card-visible 1s linear;
+} */
+
+@keyframes card-flip {
+  from {
+    transform: rotateY(0deg);
+    filter: brightness(100%);
+    /* opacity: 0; */
+  }
+  to {
+    transform: rotateY(180deg);
+    filter: brightness(0%);
+    /* opacity: 1; */
+  }
+}
+
+@keyframes card-visible {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+.card-card {
+  position: relative;
+  /* backface-visibility: hidden; */
+}
+
+.front-card {
+  /* position:; */
+  z-index: 2;
+}
+
+.front-card:hover {
+  /* color: black; */
+  /* opacity: brightness; */
+  /* background-color: black; */
+  /* filter: brightness(0%); */
+  /* animation-fill-mode: forwards; */
+  /* animation: colorchange 1s; */
+}
+
+/* @keyframes colorchange{
+  from{
+    filter: brightness(100%);
+  }
+  to{
+    filter: brightness(0%);
+  }
+} */
+
+/* .back-card {
+  position: absolute;
+  background-color: black;
+  color: #fff;
+  transform: rotateY(180deg);
+  width: 240px;
+  height: 330px;
+  z-index: 5;
+  text-align: center;
+  visibility: hidden;
+} */
+
 .container-poster {
   width: 200px;
   display: grid;
