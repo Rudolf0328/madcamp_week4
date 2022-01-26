@@ -13,6 +13,7 @@ const MiniPlayer=(props)=>{
         if(songs[i] == null) songs[i] = new Audio(str)
         songs[i].preload = "auto";
     }
+    const image = props.image;
     const sound = props.sound;
     const setSound = props.setSound;
     const show = props.show;
@@ -99,7 +100,7 @@ const MiniPlayer=(props)=>{
         <div className="floating" onMouseOut={checkplay} onMouseEnter={checkplay}>
             <Link to  = "/player">
             <div className="album">
-                <img className = "minicover" src = "./frozen.png"></img>
+                <img className = "minicover" src = {image}></img>
             </div>
             </Link>
             <div className = "controller">

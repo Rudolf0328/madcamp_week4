@@ -54,10 +54,13 @@ class AnimationPage extends Component {
     <div className="animation-page-background">
       <Header/>
       <div className="cards-setting">
-      <Grid container sx={{ width: "100%" }}>
+      <Grid container spacing={4} justify="flex-start">
         {itemData.map((item) => (
-          <Grid item xs key={item.img} className="card-card">
-            <div className="poster front-card">
+          <Grid item xs={6} sm={6} md={4} lg={4} key={item.img} className="card-card">
+            <div className="poster">
+              <div className="textt_movie1">fdfdfd</div>
+            <div className="posternew" position = "absolute">
+           
               <img
                 position="absolute"
                 // className="front-card"
@@ -67,7 +70,9 @@ class AnimationPage extends Component {
                 loading="lazy">
                   
                 </img>
-                <div position="absolute">안녕하세요 안녕 안녕 안녕 안녕하세요 아아아아아아아아</div>
+               
+            </div>
+
             </div>
           </Grid>
         ))}
