@@ -43,12 +43,27 @@ const NeedleDrop =(props)=>{
                 for(i = 0; i<songs.length;i++)
                 {
                     console.log(songs[i],sound);
+                    document.getElementById(i).style.fontWeight = "normal";
                     if(songs[i].src==song.src) 
                     {
                         console.log("same");
                         document.getElementById(i).style.fontWeight = "bold";
                     }
                 }
+            }
+            else{
+                document.querySelector(".arm").classList.remove("go");
+            document.querySelector(".lppan").classList.remove("lpspin");
+            document.querySelector(".cover").classList.remove("lpspin");
+            for(i = 0; i<songs.length;i++)
+            document.getElementById(i).style.fontWeight = "normal";
+            toggle = "stop";
+            song.pause();
+            setAuto(false);
+            setCurrentT(song.currentTime);
+            console.log(song.currentTime);
+            setSound(song);
+            setTotalT(song.duration);
             }
         }
     }
@@ -90,11 +105,11 @@ const NeedleDrop =(props)=>{
             document.getElementById(i).style.fontWeight = "normal";
             toggle = "stop";
             song.pause();
+            setAuto(false);
             setCurrentT(song.currentTime);
             console.log(song.currentTime);
             setSound(song);
             setTotalT(song.duration);
-            setAuto(false);
             // var temp = sound.toString().substr(-1);
             // document.getElementById(temp).style.fontWeight = "normal";
         }
@@ -125,7 +140,7 @@ const NeedleDrop =(props)=>{
     return(
       <div>
       <Header/>
-        <div className="player">
+        <div className="player" onMouseOver = {playing}>
           
         <img src = "./frozen.png" className="cover" alt=""></img>
         <img src = {lp} className="lppan"alt=""></img>
