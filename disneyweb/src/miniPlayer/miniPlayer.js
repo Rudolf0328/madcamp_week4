@@ -1,9 +1,17 @@
 import "./miniPlayer.css"
 import { IconButton, LinearProgress } from "@material-ui/core";
 let toggle = false;
+let song;
+let songs = [];
 const MiniPlayer=(props)=>{
     var title = new Array();
     title = props.title;
+    var i = 0;
+    for(i=0;i<title.length;i++){
+        var str = "./"+title[i]+".mp3";
+        if(songs[i] == null) songs[i] = new Audio(str)
+        songs[i].preload = "auto";
+    }
     const sound = props.sound;
     const setSound = props.setSound;
     const show = props.show;
@@ -14,38 +22,63 @@ const MiniPlayer=(props)=>{
     const setTotalT = props.setTotalT;
     const curTitle = props.curTitle;
     const setCurTitle = props.setCurTitle;
-    const songs = props.songs;
+    const auto = props.auto;
+    const setAuto = props.setAuto;
     function checkplay(){
-        if(sound!=null && !sound.paused){
-            document.getElementById("play").style.backgroundImage = "url('./pause.png')";
+        console.log(auto);
+        if(sound !=null) {
+            console.log(sound);
+            song = sound;
+        }
+        if(sound!=null && sound.paused){
+            document.getElementById("play").style.backgroundImage = "url('./play-button.png')";
         }
         else{
-            document.getElementById("play").style.backgroundImage = "url('./play-button.png')";
+            document.getElementById("play").style.backgroundImage = "url('./pause.png')";
         }
     }
     function stopplay(){
         if(sound!=null && !sound.paused){
             sound.pause();
+            setAuto(false);
             document.getElementById("play").style.backgroundImage = "url('./play-button.png')";
         }
         else if(sound!=null && sound.paused){
             sound.play();
+            setAuto(true);
             document.getElementById("play").style.backgroundImage = "url('./pause.png')";
         }
     }
     function prevplay(){
-        sound.pause();
-      setCurTitle(curTitle=>curTitle-1);
-      setSound(songs[curTitle]);
-      setCurrentT(0);
-      sound.play();
+        if(song != null ){
+            song.pause();
+            song.remove();
+            song.srcObject = null;
+        }
+        song = songs[curTitle-1]
+        song.play();
+        setSound(song);
+        setCurTitle(curTitle=>curTitle-1);
+        console.log(song.currentTime);
+        setCurrentT(0);
+        setTotalT(song.duration);
+        setAuto(true);
     }
     function nextplay(){
-            sound.pause();
-          setCurTitle(curTitle=>curTitle+1);
-          setSound(songs[curTitle]);
-          setCurrentT(0);
-          sound.play();
+          if(song != null ){
+            song.pause();
+            song.remove();
+            song.remove();
+            song.srcObject = null;
+        }
+        song = songs[curTitle+1]
+        song.play();
+        setSound(song);
+        setCurTitle(curTitle=>curTitle+1);
+        console.log(song.currentTime);
+        setCurrentT(0);
+        setTotalT(song.duration);
+        setAuto(true);
     }
     function soundChange(){
         if(show == false) setShow(true);
@@ -59,12 +92,12 @@ const MiniPlayer=(props)=>{
         sound.volume =(ran.value/100);
     }
     return(
-        <div className="floating">
+        <div className="floating" onMouseOut={checkplay} onMouseEnter={checkplay}>
             <div className="album">
                 <img className = "minicover" src = "./frozen.png"></img>
             </div>
             <div className = "controller">
-                <div className="title">Let It Go</div>
+                <div className="title">{title[curTitle]}</div>
                 <div>
                 <LinearProgress className = "prog" variant = "determinate" value={currentT/totalT*100}></LinearProgress>
                 </div>{
@@ -72,8 +105,10 @@ const MiniPlayer=(props)=>{
                 }
                 <div className="buttons">
                 <button className = "volume" onClick={soundChange} ></button>
-                <button className = "back" ></button>
-                <button className = "play" id = "play" onClick={stopplay}></button>
+                <button className = "back" onClick={prevplay}></button>
+                {
+                    auto?<button className = "play" id = "play" backgroundimage = "url('./pause.png')" onClick={stopplay}></button>:<button className = "play" id = "play"  backgroundimage = "url('./play-button.png')" onClick={stopplay}></button>
+                }
                 <button className = "next" onClick={nextplay}></button>
                 </div>
             </div>
