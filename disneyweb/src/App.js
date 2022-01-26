@@ -25,19 +25,22 @@ let song;
 let songs = [];
 function App() {
   var i;
-  const title = ["Frozen Heart","Do You Want to Build a Snowman", "For the First Time in Forever","Love Is an Open Door","Let It Go", "Reindeers Are Better Than People", "In Summer","For the First Time in Forever Reprise", "Fixer Upper"];
-  for(i=0;i<title.length;i++){
-    var str = "./"+title[i]+".mp3";
-    if(songs[i] == null) songs[i] = new Audio(str)
-    songs[i].preload = "auto";
-}
+  
   const [sound, setSound] = useState(songs[0]);
   const [auto, setAuto] = useState(false);
   const [currentT, setCurrentT] = useState(0);
   const [totalT, setTotalT] = useState(0);
   const [show, setShow] = useState(false);
   const [curTitle,setCurTitle] = useState(0);
-function nextsong(){
+  const [isplaying, setIsplaying] = useState(false);
+  const [title,setTitle] = useState(["Frozen Heart","Do You Want to Build a Snowman", "For the First Time in Forever","Love Is an Open Door","Let It Go", "Reindeers Are Better Than People", "In Summer","For the First Time in Forever Reprise", "Fixer Upper"]);
+  for(i=0;i<title.length;i++){
+    var str = "./"+title[i]+".mp3";
+    if(songs[i] == null) songs[i] = new Audio(str)
+    songs[i].preload = "auto";
+}
+
+  function nextsong(){
   console.log(sound.duration);
           setSound(songs[curTitle]);
           setCurrentT(0);
@@ -45,21 +48,27 @@ function nextsong(){
           
 }
   useEffect(() => {
-    // if(sound!=null){
-    //   if(!sound.paused){
-    //     console.log(currentT,totalT);
-    //     if(currentT>=totalT-1){
-    //       sound.pause();
-    //       console.log(curTitle);
-    //       setCurTitle(curTitle=>curTitle+1);
-    //       console.log(curTitle);
-    //       nextsong();
-    //     }
-    //   }
-    // }
+    if(currentT>=totalT-1.0){
+      song = sound;
+      if(song != null ){
+        song.pause();
+        song.remove();
+        song.remove();
+        song.srcObject = null;
+    }
+      song = songs[curTitle+1]
+      song.play();
+      setSound(song);
+      setCurTitle(curTitle=>curTitle+1);
+      console.log(song.currentTime);
+      setCurrentT(0);
+      setTotalT(song.duration);
+      setAuto(true);
+    }
     const interval = setInterval(async () => {
       if(sound!=null){
         if(!sound.paused){
+          console.log(auto);
           setCurrentT(sound.currentTime);
         }
       }
@@ -76,12 +85,12 @@ function nextsong(){
      <Route path = "/" element = {<Sec5/>} />
       <Route path = "/player" element = {<NeedleDrop songs = {songs} curTitle = {curTitle} setCurTitle = {setCurTitle} title = {title} sound = {sound} setSound = {setSound} auto = {auto} setAuto = {setAuto} currentT = {currentT} setCurrentT = {setCurrentT} totalT = {totalT} setTotalT = {setTotalT}/>}/>
       <Route path = "/animation" element = {<AnimationPage/>} />
-      <Route path = "/music" element = {<InfoPage/>} />
+      <Route path = "/music" element = {<InfoPage title = {title} setTitle = {setTitle}/>} />
       <Route path = "/characters" element = {<CharacterPage/>} />
        {/* <Route path = "/music" element = {<Bingbing/>} /> */}
       {/* <Route path = "/characters" element = {<Character/>} /> */}
       </Routes>
-      <MiniPlayer songs = {songs} curTitle = {curTitle} setCurTitle = {setCurTitle} title = {title} show = {show} setShow = {setShow} sound = {sound} setSound = {setSound} currentT = {currentT} setCurrentT = {setCurrentT} totalT = {totalT} setTotalT = {setTotalT}/>
+      <MiniPlayer songs = {songs} curTitle = {curTitle} setCurTitle = {setCurTitle} title = {title} show = {show} setShow = {setShow} sound = {sound} setSound = {setSound} currentT = {currentT} setCurrentT = {setCurrentT} totalT = {totalT} setTotalT = {setTotalT} auto = {auto} setAuto = {setAuto}/>
     </div>
     </Router>
     </>
