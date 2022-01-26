@@ -68,7 +68,6 @@ function App() {
     const interval = setInterval(async () => {
       if(sound!=null){
         if(!sound.paused){
-          console.log(auto);
           setCurrentT(sound.currentTime);
         }
       }

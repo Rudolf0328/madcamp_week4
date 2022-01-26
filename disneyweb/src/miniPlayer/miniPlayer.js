@@ -1,5 +1,6 @@
 import "./miniPlayer.css"
 import { IconButton, LinearProgress } from "@material-ui/core";
+import {Link, BrowserRouter as Router} from 'react-router-dom';
 let toggle = false;
 let song;
 let songs = [];
@@ -41,11 +42,14 @@ const MiniPlayer=(props)=>{
         if(sound!=null && !sound.paused){
             sound.pause();
             setAuto(false);
+            
             document.getElementById("play").style.backgroundImage = "url('./play-button.png')";
         }
         else if(sound!=null && sound.paused){
             sound.play();
             setAuto(true);
+            setSound(song);
+            setTotalT(song.duration);
             document.getElementById("play").style.backgroundImage = "url('./pause.png')";
         }
     }
@@ -93,9 +97,11 @@ const MiniPlayer=(props)=>{
     }
     return(
         <div className="floating" onMouseOut={checkplay} onMouseEnter={checkplay}>
+            <Link to  = "/player">
             <div className="album">
                 <img className = "minicover" src = "./frozen.png"></img>
             </div>
+            </Link>
             <div className = "controller">
                 <div className="title">{title[curTitle]}</div>
                 <div>

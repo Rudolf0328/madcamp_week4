@@ -140,7 +140,7 @@ const NeedleDrop =(props)=>{
     return(
       <div>
       <Header/>
-        <div className="player" onMouseOver = {playing}>
+        <div className="player" onMouseOver = {playing} onMouseLeave={playing}>
           
         <img src = "./frozen.png" className="cover" alt=""></img>
         <img src = {lp} className="lppan"alt=""></img>
