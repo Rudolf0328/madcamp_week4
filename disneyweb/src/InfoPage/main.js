@@ -35,7 +35,7 @@ class InfoPage extends Component {
   //   }
   // }
   render() {
-    
+    let url = "/player"
     return (
       <div>
         <Header></Header>
@@ -47,8 +47,16 @@ class InfoPage extends Component {
             </div >
             <div className="individual" >
             <div className= "color" id = "color" >
-          <Link to ="/player">
-            <div className = "rectangle" >
+            <Link
+              to={{
+                pathname: url,
+                state: {
+                  img: "./al1.jpg",
+                  titles: []
+                },
+              }}
+            >
+              <div className = "rectangle" >
             <div class="text" > </div>
             <div >
                 <img src="./al1.jpg" className="profile"></img>
@@ -96,7 +104,15 @@ class InfoPage extends Component {
             </div >
             <div className="individual" >
             <div className= "color" id = "color" >
-          <Link to ="/player">
+            <Link
+              to={{
+                pathname: url,
+                state: {
+                  img: "./al3.jpg",
+                  titles: []
+                },
+              }}
+            >
             <div className = "rectangle" >
             <div class="text" > </div>
             <div >
@@ -119,11 +135,19 @@ class InfoPage extends Component {
             </div >
             <div className="individual" >
             <div className= "color" id = "color" >
-          <Link to ="/player">
+            <Link
+              to={{
+                pathname: url,
+                state: {
+                  img: "./al4.jpg",
+                  titles: ["Frozen Heart","Do You Want to Build a Snowman", "For the First Time in Forever","Love Is an Open Door","Let It Go", "Reindeers Are Better Than People", "In Summer","For the First Time in Forever Reprise", "Fixer Upper"]
+                },
+              }}
+            >
             <div className = "rectangle" >
             <div class="text" > </div>
             <div >
-                <img src="./al4..jpg" className="profile"></img>
+                <img src="./al4.jpg" className="profile"></img>
             </div>
             </div>
             </Link>
