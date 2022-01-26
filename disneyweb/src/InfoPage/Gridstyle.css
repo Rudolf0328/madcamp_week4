@@ -52,12 +52,12 @@ body {
 .profile
 {
   position: absolute;
-  align-content: center;
+  /* align-content: center; */
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  margin-top: -2%;
-  margin-left: 10%;
+  margin-top: 8%;
+  margin-left: -40%;
   /* background-color: rgb(240, 0, 0) */
 }
 
@@ -95,10 +95,10 @@ body {
 
 .lpsize{
   position: absolute;
-  width: 300px;
-  height: 300px;
-  margin-top: -300px;
-  margin-left: 40px;
+  width: 270px;
+  height: 270px;
+  margin-top: -280px;
+  margin-left: 70px;
   position: relative;
   /* visibility: hidden; */
   z-index: -1;
@@ -122,11 +122,13 @@ body {
 .color:hover .lpsize{
   visibility: visible;
   transition: 1s;
-  transform: translateX(150px);
+   /* transform: translateX(150px); */
+   
+   animation: downsizego 4s;
+   animation-fill-mode: forwards;
 }
 
-.color:active {
-  
+.color:active { 
    transform: rotateY(90deg); 
    /* transform: scale(1.1,1.1); */
    animation : rotate_image 1s infinite linear;
@@ -135,7 +137,9 @@ body {
 }
 
 .color.active .lpsize{
-  display: none;
+  /* /* transform: translateX(-150px); */
+  /* display: none; */
+  animation: downsizego ;
 
 }
 
@@ -145,6 +149,18 @@ body {
   }
   to {
     transform: rotateY(359deg);
+  }
+}
+
+@keyframes downsizego{
+  from{
+    transform: translateX(0px);
+  }
+  50%{
+    transform: translateX(150px);
+  }
+  to{
+    transform: translateX(-43px)
   }
 }
 
