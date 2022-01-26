@@ -53,7 +53,6 @@ function App() {
       if(song != null ){
         song.pause();
         song.remove();
-        song.remove();
         song.srcObject = null;
     }
       song = songs[curTitle+1]
