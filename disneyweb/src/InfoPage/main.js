@@ -25,6 +25,7 @@ class InfoPage extends Component {
   }
 
   render() {
+    let url="/player"
     return (
       <div>
         <Header></Header>
@@ -34,8 +35,16 @@ class InfoPage extends Component {
             <div>
             &nbsp;
             </div >
-            <Link to="/player">
-            <div className="individual" >
+            <Link
+              to={{
+                pathname: url,
+                state: {
+                  img: "./al1.jpg",
+                  titles: [""]
+                },
+              }}
+              >
+              <div className="individual" >
             <div className= "color" >
             
             <div className = "rectangle" >
@@ -50,6 +59,9 @@ class InfoPage extends Component {
             
             </div>
             </div>
+            </Link>
+            <Link to="/player">
+            
             </Link>
             
             
@@ -100,7 +112,7 @@ class InfoPage extends Component {
             <div className = "rectangle" >
             <div className="text" > Hello! </div>
             <div >
-                <img src="./al4.jpg" className="profile"></img>
+                <img src="./al4..jpg" className="profile"></img>
             </div>
             </div>
             </div>

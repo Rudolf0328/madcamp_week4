@@ -102,7 +102,9 @@ class Header extends Component {
       </Link>
     </Grid>
     <Grid item xs align="center">
+      <Link to="/">
       <img src="./diswiki.png" className="logo-design"></img>
+      </Link>
     </Grid>
     <Grid item xs align="center">
       <Link to="/music">
