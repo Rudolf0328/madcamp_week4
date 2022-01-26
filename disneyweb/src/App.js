@@ -20,6 +20,7 @@ import "./header.css";
 import MiniPlayer from './miniPlayer/miniPlayer';
 import Character from './CharacterPage/Character';
 import CharacterPage from './CharacterPage/CharacterPage';
+import Testversion from './testversion/testversion';
 
 let song;
 let songs = [];
@@ -87,6 +88,8 @@ function App() {
       <Route path = "/animation" element = {<AnimationPage/>} />
       <Route path = "/music" element = {<InfoPage title = {title} setTitle = {setTitle}/>} />
       <Route path = "/characters" element = {<CharacterPage/>} />
+      <Route path = "/testversion" element = {<Testversion/>} />
+
        {/* <Route path = "/music" element = {<Bingbing/>} /> */}
       {/* <Route path = "/characters" element = {<Character/>} /> */}
       </Routes>

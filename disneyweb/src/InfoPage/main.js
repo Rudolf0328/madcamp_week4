@@ -143,6 +143,7 @@ class InfoPage extends Component {
             <div className="individual" >
             <div className= "color" id = "color" >
           <Link to ="/player">
+            
             <div className = "rectangle" >
             <div class="text" > </div>
             <div >

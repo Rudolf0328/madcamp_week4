@@ -12,25 +12,28 @@
   height: 330px;
   padding: 7%;
   position: relative;
-  box-sizing: border-box;
+  /* box-sizing: border-box;
   background-color: #fff;
   box-shadow: 0 3px 12px rgba(0,0,0,0.2);
   filter: saturate(85%) contrast(85%);
   z-index: 3;
-  transform: rotateY(0);
+  transform: rotateY(0); */
 }
 .poster img {
   width: 200px;
   height: 290px;
   display: block;
-  z-index: 1;
+  /* z-index: 1; */
+  position: relative;
+
 }
+
 .poster:before,
 .poster:after {
   content: '';
   width: 100%;
   left: 0;
-  position: absolute;
+  /* position: absolute; */
 }
 .poster:before {
   /* height: 4%;
@@ -49,7 +52,18 @@
   background-size: 50% 100%, 100% 33.3333%, 100% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%;
   background-position: right top, left center, left bottom, left top, left top, right top, left center, right center, right center, left bottom; */
 }
-.poster:hover {
+.posternew{
+  width: 240px;
+  height: 330px;
+  padding: 7%;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+  filter: saturate(85%) contrast(85%);
+  z-index: 3;
+  transform: rotateY(0);
+}
+.posternew:hover {
   animation: card-flip 1s linear;
   animation-fill-mode: forwards;
   transform: rotateY(180deg);
@@ -57,6 +71,24 @@
   opacity: 1;
   /* background-color: black; */
 }
+
+.textt_movie1{
+  text-align: left;
+  margin-left: 10px;
+  /* filter: brightness(100%); */
+  /* opacity: 100%; */
+  color: white;
+  position:absolute;
+  z-index: 5;
+  visibility: hidden;
+}
+
+
+.posternew:hover .textt_movie1{
+  visibility:visible;
+}
+
+
 
 .poster div {
   /* opacity: 0; */
@@ -95,14 +127,10 @@
 }
 
 .card-card {
-  position: relative;
+  /* position: relative; */
   /* backface-visibility: hidden; */
 }
 
-.front-card {
-  /* position:; */
-  z-index: 2;
-}
 
 .front-card:hover {
   /* color: black; */
@@ -152,3 +180,5 @@
   margin-left: 3vh;
   margin-right: 3vh;
 }
+
+
