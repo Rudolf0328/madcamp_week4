@@ -11,6 +11,8 @@ let toggle = "stop";
 let song;
 let songs = [];
 const NeedleDrop =(props)=>{
+
+  console.log(props)
     var title = new Array();
     title = props.title;
     var i = 0;
@@ -19,6 +21,8 @@ const NeedleDrop =(props)=>{
         if(songs[i] == null) songs[i] = new Audio(str)
         songs[i].preload = "auto";
     }
+    
+    const image = props.image;
     const sound = props.sound;
     const setSound = props.setSound;
     const auto = props.auto;
@@ -55,6 +59,7 @@ const NeedleDrop =(props)=>{
                 document.querySelector(".arm").classList.remove("go");
             document.querySelector(".lppan").classList.remove("lpspin");
             document.querySelector(".cover").classList.remove("lpspin");
+            song = sound;
             for(i = 0; i<songs.length;i++)
             document.getElementById(i).style.fontWeight = "normal";
             toggle = "stop";
@@ -142,7 +147,7 @@ const NeedleDrop =(props)=>{
       <Header/>
         <div className="player" onMouseOver = {playing} onMouseLeave={playing}>
           
-        <img src = "./frozen.png" className="cover" alt=""></img>
+        <img src = {image} className="cover" alt=""></img>
         <img src = {lp} className="lppan"alt=""></img>
         <div className="songs">
             {
