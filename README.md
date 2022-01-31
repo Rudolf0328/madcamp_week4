@@ -27,7 +27,7 @@ React를 사용하여 interactive한 UI 제작을 목표로 진행했다.
 감성적 디자인을 위해 LP판의 움직임을 차용하였다.<br/>
 </p>
 <p>
-<img src = "https://user-images.githubusercontent.com/63051745/151119610-3da4d99d-d18d-4001-b37f-17ef0d518580.png"></img>
+<img src = "https://user-images.githubusercontent.com/63051745/151119194-03c7a113-dbd2-432e-8585-e9eb62737476.png"></img>
 music 아이콘을 클릭하면 디즈니 영화들의 sound track 앨범들이 나열되어 있다.<br/>
 마우스를 갖다대면 앨범에서 lp판이 삐죽 튀어나오도록 애니메이션을 추가하였다.<br/>
 마우스로 꾹 누르고 있으면 앨범이 빙글빙글 회전하며 마우스를 떼면 레코드 플레이어로 이동한다. <br/>
